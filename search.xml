@@ -3,25 +3,28 @@
   <entry>
     <title>Markdown笔记</title>
     <url>/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id><a href="#" class="headerlink" title></a></h2><span id="more"></span>
+    <content><![CDATA[<img src="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/anime-girl.jpg">
 
-<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>​    NOTICE: <strong>这里记住在#后面一定要有空格</strong></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>码农没有自己的个人博客属实毫无牌面，最近接触的Markdown语法特别方便的同时且容易上手，对于hexo、 jekyll、hugo框架的博客非常好用，下面就罗列一下正常会使用的语法，以及在学习过程中遇到的一些坑。</p>
+<span id="more"></span>
+
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>​    <strong>在#后面一定要有空格</strong></p>
 <p>​    # 一级标题<br>​    ## 二级标题<br>​    ### 三级标题<br>​    #### 四级标题<br>​    ##### 五级标题<br>​    ###### 六级标题</p>
-<h4 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h4><p>​    常用的有-–或者***</p>
-<h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><p>​    字体样式显示参考👉<a href="https://blog.csdn.net/thither_shore/article/details/52181464">https://blog.csdn.net/thither_shore/article/details/52181464</a>    </p>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>​    常用的有-–或者***</p>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>​    字体样式显示参考👉<a href="https://blog.csdn.net/thither_shore/article/details/52181464">https://blog.csdn.net/thither_shore/article/details/52181464</a>    </p>
 <p>​    字体方面有加粗、斜体、删除线等等，其他颜色大小有需要可以参考html的用法    </p>
 <p>​    加粗    *<em>加粗字体</em>*<br>​    删除线    ~~被删除~~<br>​    斜体    *斜体*</p>
 <p>上面三种同样可以用<strong>右击鼠标</strong>的方法实现~</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">&quot;黑体&quot;</span>&gt;</span>我是黑体字<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">&quot;微软雅黑&quot;</span>&gt;</span>我是微软雅黑<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">&quot;STCAIYUN&quot;</span>&gt;</span>我是华文彩云<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#0099ff</span> <span class="attr">size</span>=<span class="string">3</span> <span class="attr">face</span>=<span class="string">&quot;黑体&quot;</span>&gt;</span>color=#0099ff size=3 face=&quot;黑体&quot;<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#00ffff</span> <span class="attr">size</span>=<span class="string">4</span>&gt;</span>color=#00ffff size=4<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">gray</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span>color=gray size=5<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><p>​    ESC下面的波浪键 两边各3个<strong>```Java/C#/C++/Python…```</strong></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>​    ESC下面的波浪键 两边各3个<strong>```Java/C#/C++/Python…```</strong></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;Hello World!&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p><img src="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/%5CMarkdown%E7%AC%94%E8%AE%B0%5Cwallpaper.jpg">    </p>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p><img src="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/%5CMarkdown%E7%AC%94%E8%AE%B0%5Cwallpaper.jpg">    </p>
 <p>​    格式：![命名的图片名称](网络/本地图片路径)    <img src="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/wallpaper.jpg">    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171124%2F5aed8ee6df944368adc7e5f96089da61.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1618051227&t=c8fe47b6983685fca417a924ccf8323b" alt="网络图片"></p>
 <p>​    网络图片需要<font color="red"><strong>复制图片地址</strong></font>非复制路径地址</p>
-<h4 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h4><p>​    格式： [超链接名称](链接地址) eg. <a href="www.bilibili.com">Bilibili</a></p>
-<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p>​    列表共计两种：无序/有序</p>
+<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p>​    格式： [超链接名称](链接地址) eg. <a href="www.bilibili.com">Bilibili</a></p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>​    列表共计两种：无序/有序</p>
 <ul>
 <li>无序列表1（**-后有一个空格**）</li>
 <li>无序列表2<ul>
@@ -36,7 +39,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><p>​    代码相对繁琐，通过鼠标右击即可实现</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>​    代码相对繁琐，通过鼠标右击即可实现</p>
 <table>
 <thead>
 <tr>
@@ -49,7 +52,7 @@
 <td>GG</td>
 </tr>
 </tbody></table>
-<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p>​    格式：&gt;引用</p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>​    格式：&gt;引用</p>
 <p>​    几个&gt;就是几级引用</p>
 <blockquote>
 <p>一级引用</p>
@@ -66,7 +69,6 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
-        <tag>uu</tag>
       </tags>
   </entry>
   <entry>
@@ -88,6 +90,16 @@
 ]]></content>
   </entry>
   <entry>
+    <title>基于struts2和hibernate的简易微博系统</title>
+    <url>/2019/06/11/test/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>Java Web</tag>
+        <tag>struts2</tag>
+        <tag>hibernate</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>new test</title>
     <url>/2018/03/09/new-test/</url>
     <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h4 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h4><blockquote class="blockquote-center">blah blah blah</blockquote> 
@@ -101,10 +113,5 @@
             <p>blah blah blah </p>
 
           </blockquote>]]></content>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2021/03/11/test/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
