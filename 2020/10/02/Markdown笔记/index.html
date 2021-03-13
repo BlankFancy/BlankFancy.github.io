@@ -20,27 +20,25 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="随语码农没有自己的个人博客属实毫无牌面，最近接触的Markdown语法特别方便的同时且容易上手，对于hexo、 jekyll、hugo框架的博客非常好用，下面就罗列一下正常会使用的语法，以及在学习过程中遇到的一些坑。">
+  <meta name="description" content="随语码农没有个人博客属实毫无牌面，最近接触的Markdown语法特别方便的同时且容易上手，对于hexo、 jekyll、hugo框架的博客非常好用，下面就罗列一下正常会使用的语法，以及在学习过程中遇到的一些坑。 参考教程👉【使用教程】15分钟快速上手Markdown教程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown笔记">
 <meta property="og:url" content="http://example.com/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="FIRE">
-<meta property="og:description" content="随语码农没有自己的个人博客属实毫无牌面，最近接触的Markdown语法特别方便的同时且容易上手，对于hexo、 jekyll、hugo框架的博客非常好用，下面就罗列一下正常会使用的语法，以及在学习过程中遇到的一些坑。">
+<meta property="og:description" content="随语码农没有个人博客属实毫无牌面，最近接触的Markdown语法特别方便的同时且容易上手，对于hexo、 jekyll、hugo框架的博客非常好用，下面就罗列一下正常会使用的语法，以及在学习过程中遇到的一些坑。 参考教程👉【使用教程】15分钟快速上手Markdown教程">
 <meta property="og:locale" content="zh_HK">
-<meta property="og:image" content="http://example.com/.com//10/02/Markdown%E7%AC%94%E8%AE%B0/wallpaper.jpg">
-<meta property="og:image" content="http://example.com/.com//anime-girl.jpg">
-<meta property="og:image" content="http://example.com/.com//%5Cuploads%5Cspace.jpg">
-<meta property="og:image" content="http://example.com/.com//wallpaper.jpg">
-<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171124%2F5aed8ee6df944368adc7e5f96089da61.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1618051227&t=c8fe47b6983685fca417a924ccf8323b">
+<meta property="og:image" content="http://example.com/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/anime-girl.jpg">
+<meta property="og:image" content="https://pic.netbian.com/uploads/allimg/180803/084010-15332568107994.jpg">
+<meta property="og:image" content="http://example.com/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/wallpaper.jpg">
 <meta property="article:published_time" content="2020-10-02T01:30:44.000Z">
-<meta property="article:modified_time" content="2021-03-12T11:57:32.314Z">
+<meta property="article:modified_time" content="2021-03-13T07:48:33.273Z">
 <meta property="article:author" content="BlankFancy">
 <meta property="article:tag" content="Markdown">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/.com//10/02/Markdown%E7%AC%94%E8%AE%B0/wallpaper.jpg">
+<meta name="twitter:image" content="http://example.com/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/anime-girl.jpg">
 
 <link rel="canonical" href="http://example.com/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/">
 
@@ -238,13 +236,34 @@
                 </span>
             </span>
 
-          <br>
+          
+            <span id="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/" class="post-meta-item leancloud_visitors" data-flag-title="Markdown笔记" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字數">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字數：</span>
-              <span>1.1k</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="閱讀時長">
               <span class="post-meta-item-icon">
@@ -263,17 +282,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <img src="/.com//10/02/Markdown%E7%AC%94%E8%AE%B0/wallpaper.jpg" class title="This is an example image">
-
-<img src="/.com//anime-girl.jpg">
-
-<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>码农没有自己的个人博客属实毫无牌面，最近接触的Markdown语法特别方便的同时且容易上手，对于hexo、 jekyll、hugo框架的博客非常好用，下面就罗列一下正常会使用的语法，以及在学习过程中遇到的一些坑。</p>
+        <p><img src="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/anime-girl.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>码农没有个人博客属实毫无牌面，最近接触的Markdown语法特别方便的同时且容易上手，对于hexo、 jekyll、hugo框架的博客非常好用，下面就罗列一下正常会使用的语法，以及在学习过程中遇到的一些坑。</p>
+<p>参考教程👉<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hJ411X75X">【使用教程】15分钟快速上手Markdown教程 </a></p>
 <span id="more"></span>
 
 <h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h3><p>​    <strong>在#后面一定要有空格</strong></p>
 <p>​    # 一级标题<br>​    ## 二级标题<br>​    ### 三级标题<br>​    #### 四级标题<br>​    ##### 五级标题<br>​    ###### 六级标题</p>
 <h3 id="2-分割线"><a href="#2-分割线" class="headerlink" title="2. 分割线"></a>2. 分割线</h3><p>​    常用的有-–或者***</p>
-<h3 id="3-字体"><a href="#3-字体" class="headerlink" title="3. 字体"></a>3. 字体</h3><p>​    字体样式显示参考👉<a target="_blank" rel="noopener" href="https://blog.csdn.net/thither_shore/article/details/52181464">https://blog.csdn.net/thither_shore/article/details/52181464</a>    </p>
+<h3 id="3-字体"><a href="#3-字体" class="headerlink" title="3. 字体"></a>3. 字体</h3><p>​    字体样式显示参考👉<a target="_blank" rel="noopener" href="https://blog.csdn.net/thither_shore/article/details/52181464">markdown 文字样式设置（字体, 大小, 颜色, 高亮底色</a></p>
 <p>​    字体方面有加粗、斜体、删除线等等，其他颜色大小有需要可以参考html的用法    </p>
 <p>​    加粗    *<em>加粗字体</em>*<br>​    删除线    ~~被删除~~<br>​    斜体    *斜体*</p>
 <p>上面三种同样可以用<strong>右击鼠标</strong>的方法实现~</p>
@@ -282,10 +299,14 @@
 <h3 id="4-代码"><a href="#4-代码" class="headerlink" title="4. 代码"></a>4. 代码</h3><p>​    ESC下面的波浪键 两边各3个<strong>```Java/C#/C++/Python…```</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;Hello World!&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-图片"><a href="#5-图片" class="headerlink" title="5. 图片"></a>5. 图片</h3><p><img src="/.com//%5Cuploads%5Cspace.jpg">    </p>
-<p>​    格式：![命名的图片名称](网络/本地图片路径)    <img src="/.com//wallpaper.jpg">    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171124%2F5aed8ee6df944368adc7e5f96089da61.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1618051227&t=c8fe47b6983685fca417a924ccf8323b" alt="网络图片"></p>
+<h3 id="5-图片"><a href="#5-图片" class="headerlink" title="5. 图片"></a>5. 图片</h3><p>​    格式：![命名的图片名称](网络/本地图片路径)</p>
+<p>​    eg. ![网络图片](<a target="_blank" rel="noopener" href="https://pic.netbian.com/uploads/allimg/180803/084010-15332568107994.jpg">https://pic.netbian.com/uploads/allimg/180803/084010-15332568107994.jpg</a>)</p>
+<p><img src="https://pic.netbian.com/uploads/allimg/180803/084010-15332568107994.jpg" alt="网络图片"></p>
+<p>​        eg. ![本地图片](wallpaper.jpg)    </p>
+<p>​    <img src="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/wallpaper.jpg" alt="本地图片"></p>
 <p>​    网络图片需要<font color="red"><strong>复制图片地址</strong></font>非复制路径地址</p>
-<h3 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6. 超链接"></a>6. 超链接</h3><p>​    格式： [超链接名称](链接地址) eg. <a href="www.bilibili.com">Bilibili</a></p>
+<h3 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6. 超链接"></a>6. 超链接</h3><p>​    格式： [超链接名称](链接地址)</p>
+<p>​     eg. <a href="www.bilibili.com">Bilibili</a>([Bilibili](<a target="_blank" rel="noopener" href="http://www.bilibili.com/">www.bilibili.com</a>))</p>
 <h3 id="7-列表"><a href="#7-列表" class="headerlink" title="7. 列表"></a>7. 列表</h3><p>​    列表共计两种：无序/有序</p>
 <ul>
 <li>无序列表1（**-后有一个空格**）</li>
@@ -332,7 +353,7 @@
     
     
         <div class="reward-container">
-  <div></div>
+  <div>感謝老闆支持!</div>
   <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
     打賞
   </button>
@@ -359,13 +380,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/06/11/test/" rel="prev" title="基于struts2和hibernate的简易微博系统">
-      <i class="fa fa-chevron-left"></i> 基于struts2和hibernate的简易微博系统
+    <a href="/2018/03/09/new-test/" rel="prev" title="new test">
+      <i class="fa fa-chevron-left"></i> new test
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/09/hello-world/" rel="next" title="Hello World">
-      Hello World <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -378,7 +396,7 @@
 
           </div>
           
-    <div class="comments" id="gitalk-container"></div>
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -441,7 +459,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -454,7 +472,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -470,6 +488,11 @@
 
 
 
+      </div>
+
+      <div id="music163player">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=0&id=4864308325&auto=1&height=32">
+          </iframe>
       </div>
 
     </div>
@@ -585,23 +608,32 @@
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '',
-      clientSecret: '',
-      repo        : '',
-      owner       : '',
-      admin       : [''],
-      id          : '7850afdf013b1ad9929643480dd04a65',
-        language: 'zh-CN',
-      distractionFreeMode: true
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'icawYuOQjAP79YaEXmXRJRaC-gzGzoHsz',
+      appKey     : 'VNFXON1APS8PRFdvxvdwWvrc',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
 });
 </script>
 
