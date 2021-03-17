@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="随语温习数据库知识时，无聊的学生管理系统、课程管理系统看的令人麻木🙃为啥不搞点不一样的嘞？自己做个其他模板它不香嘛，搞起！ 完整数据库文件👉车辆租赁系统数据库-Vehicle Database.sql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="车辆租赁系统的数据库设计">
+<meta property="og:url" content="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:site_name" content="FIRE">
+<meta property="og:description" content="随语温习数据库知识时，无聊的学生管理系统、课程管理系统看的令人麻木🙃为啥不搞点不一样的嘞？自己做个其他模板它不香嘛，搞起！ 完整数据库文件👉车辆租赁系统数据库-Vehicle Database.sql">
+<meta property="og:locale" content="zh_HK">
+<meta property="og:image" content="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/cyber.jpg">
+<meta property="og:image" content="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/1.jpg">
+<meta property="og:image" content="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/2.jpg">
+<meta property="og:image" content="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E7%AE%A1%E7%90%86%E5%91%98-%E8%BD%A6%E8%BE%86ER.JPG">
+<meta property="og:image" content="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E7%AE%A1%E7%90%86%E5%91%98-%E5%AE%A2%E6%88%B7ER.JPG">
+<meta property="og:image" content="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E5%AE%A2%E6%88%B7-%E8%BD%A6%E8%BE%86ER.JPG">
+<meta property="og:image" content="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E5%85%A8%E5%B1%80ER.JPG">
+<meta property="article:published_time" content="2019-10-05T02:25:17.000Z">
+<meta property="article:modified_time" content="2021-03-17T22:07:08.536Z">
+<meta property="article:author" content="BlankFancy">
+<meta property="article:tag" content="SQL">
+<meta property="article:tag" content="数据库设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/cyber.jpg">
+
+<link rel="canonical" href="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-HK'
+  };
+</script>
+
+  <title>车辆租赁系统的数据库设计 | FIRE</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">FIRE</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Nothing is impossible</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>檢索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/BlankFancy" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-HK">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="BlankFancy">
+      <meta itemprop="description" content="“失敗大不了從頭來過。”">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FIRE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          车辆租赁系统的数据库设计
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2019-10-05 10:25:17" itemprop="dateCreated datePublished" datetime="2019-10-05T10:25:17+08:00">2019-10-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Project-Design/" itemprop="url" rel="index"><span itemprop="name">Project Design</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/" class="post-meta-item leancloud_visitors" data-flag-title="车辆租赁系统的数据库设计" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字數：</span>
+              <span>2.9k</span>
+            </span>
+            <span class="post-meta-item" title="閱讀時長">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+              <span>3 分鍾</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/cyber.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>温习数据库知识时，无聊的学生管理系统、课程管理系统看的令人麻木🙃为啥不搞点不一样的嘞？自己做个其他模板它不香嘛，搞起！</p>
+<p>完整数据库文件👉<a target="_blank" rel="noopener" href="https://download.csdn.net/download/Qyy2079628327/15784319">车辆租赁系统数据库-Vehicle Database.sql </a></p>
+<span id="more"></span>
+
+<h3 id="系统功能设想"><a href="#系统功能设想" class="headerlink" title="系统功能设想"></a>系统功能设想</h3><h4 id="✔对象说明"><a href="#✔对象说明" class="headerlink" title="✔对象说明"></a>✔对象说明</h4><p>车辆租赁系统主要包含以下<strong>三个</strong>管理系统：</p>
+<ul>
+<li><p><strong>客户信息管理</strong>：客户基本信息(客户编号、客户姓名、客户密码、客户电话、客户邮箱、客户身份证号、租用数量)增加、修改、查询与删除。</p>
+</li>
+<li><p><strong>车辆信息管理</strong>：车辆基本信息(车辆编号、车辆分类号、车辆名称、车辆品牌、车辆价格、车辆押金、单日租用价格、入库时间)增加、修改、查询与删除。</p>
+</li>
+<li><p><strong>租赁业务管理</strong>：车辆的租用和归还功能，对车辆租用信息(包括租用编号，客户编号，车辆编号，租用日期，应归还日期,归还日期)增加、修改、查询与删除。</p>
+</li>
+</ul>
+<h4 id="✔功能说明"><a href="#✔功能说明" class="headerlink" title="✔功能说明"></a>✔功能说明</h4><p>车辆租赁系统的使用者分为<strong>客户</strong>和<strong>管理员</strong></p>
+<h5 id="💫管理员模块"><a href="#💫管理员模块" class="headerlink" title="💫管理员模块"></a>💫管理员模块</h5><p>管理员可以进行<strong>客户管理</strong>，<strong>车辆管理</strong>，<strong>车辆租用业务管理</strong>，<strong>个人信息管理</strong>。</p>
+<ol>
+<li><p><strong>用户管理功能</strong>：可以直接查看用户的信息，能直接看到每一位用户的租用信息，并对违规客户(逾期归还车辆或破坏车辆多次)进行删除。</p>
+</li>
+<li><p><strong>车辆管理功能</strong>：可以增加、删除、更改数据库中车辆的信息。</p>
+</li>
+<li><p><strong>车辆租用业务管理功能</strong>：是将客户租用相关车辆的信息登记到客户信息上，客户想要租用车辆必须通过管理员使用该功能将该车辆信息登记到其账户上。</p>
+</li>
+<li><p><strong>个人信息管理</strong>：指管理员可以对自身的账户信息进行修改。</p>
+</li>
+</ol>
+<h5 id="💫客户模块"><a href="#💫客户模块" class="headerlink" title="💫客户模块"></a>💫客户模块</h5><p>客户可以<strong>查询个人信息</strong>和<strong>车辆信息</strong>。</p>
+<ol>
+<li><p><strong>查询个人信息</strong>：可以查看用户的个人信息、车辆租用信息以及更改用户账号密码。当用户登录成功后就能看到自身租用的车辆的时间、归还期限。并且可以管理自身的账户密码。</p>
+</li>
+<li><p><strong>查询车辆信息</strong>：可以通过搜索精确查找到具体需要的车辆，并且可以查看每一辆车的详细信息。当客户找到想要租用的车辆时，凭借车辆编号确定车辆，至管理员处将租用信息进行登记，并缴纳相对应的押金及租金，完成车辆租借业务。</p>
+</li>
+</ol>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/1.jpg" alt="车辆租赁系统功能结构图"></p>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/2.jpg" alt="业务流程分析"></p>
+<h3 id="概念设计"><a href="#概念设计" class="headerlink" title="概念设计"></a><strong>概念设计</strong></h3><h4 id="✔目标"><a href="#✔目标" class="headerlink" title="✔目标"></a>✔目标</h4><ul>
+<li><p><strong>管理员</strong>方便管理车辆和用户信息，以及租赁业务信息</p>
+</li>
+<li><p><strong>客户</strong>根据个人的具体需要，方便查询所需车辆。</p>
+</li>
+</ul>
+<h4 id="✔实体"><a href="#✔实体" class="headerlink" title="✔实体"></a>✔实体</h4><ul>
+<li><p><strong>管理员</strong>需要记录管理员编号、管理员姓名、管理员密码、管理员电话、管理员邮箱、管理员身份证号</p>
+</li>
+<li><p><strong>客户</strong>需要记录客户编号、客户姓名、客户密码、客户电话、客户邮箱、客户身份证号、租用数量</p>
+</li>
+<li><p><strong>车辆</strong>需要记录车辆编号、车辆分类号、车辆名称、车辆品牌、车辆价格、车辆押金、单日租用价格、入库时间</p>
+</li>
+<li><p><strong>租用业务</strong>需要记录租用编号、客户编号、车辆编号、租用日期、应归还日期、归还日期</p>
+</li>
+</ul>
+<h4 id="✔E-R图"><a href="#✔E-R图" class="headerlink" title="✔E-R图"></a>✔E-R图</h4><p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E7%AE%A1%E7%90%86%E5%91%98-%E8%BD%A6%E8%BE%86ER.JPG" alt="管理员-车辆ER"></p>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E7%AE%A1%E7%90%86%E5%91%98-%E5%AE%A2%E6%88%B7ER.JPG" alt="管理员-客户ER"></p>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E5%AE%A2%E6%88%B7-%E8%BD%A6%E8%BE%86ER.JPG" alt="客户-车辆ER"></p>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E5%85%A8%E5%B1%80ER.JPG" alt="全局ER"></p>
+<h3 id="逻辑设计"><a href="#逻辑设计" class="headerlink" title="逻辑设计"></a><strong>逻辑设计</strong></h3><h4 id="✔E-R图到关系模式的转换"><a href="#✔E-R图到关系模式的转换" class="headerlink" title="✔E-R图到关系模式的转换"></a><strong>✔E-R</strong>图到关系模式的转换</h4><ul>
+<li><p>一名管理员可以管理多辆车，一辆车可以被多名管理员管理</p>
+</li>
+<li><p>一名管理员可以管理多名客户，一名客户可以被多名管理员管理</p>
+</li>
+<li><p>一名客户可以租用多辆车，一辆车可以被多名客户租用</p>
+</li>
+</ul>
+<p><font color="skyblue">各表均不存在部分依赖和传递依赖，满足1NF，2NF，3NF的条件</font></p>
+<h3 id="数据库索引与视图"><a href="#数据库索引与视图" class="headerlink" title="数据库索引与视图"></a><strong>数据库索引与视图</strong></h3><h4 id="✔索引"><a href="#✔索引" class="headerlink" title="✔索引"></a>✔索引</h4><ul>
+<li><strong>车辆非聚集索引</strong>：便于用户快速查询自己所需车辆。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*为车辆表的车辆名称及品牌建立索引i_carName*/</span></span><br><span class="line"><span class="keyword">create</span> nonclustered</span><br><span class="line">index i_carName</span><br><span class="line"><span class="keyword">on</span> Car(carName,brandName)</span><br><span class="line"><span class="keyword">drop</span> index Car.i_carName</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>用户非聚集索引</strong>：便于管理员在必要时及时联系相关客户。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*为用户表的用户编号、姓名和联系方式建立索引i_consumer*/</span></span><br><span class="line"><span class="keyword">create</span> nonclustered</span><br><span class="line">index i_consumer</span><br><span class="line"><span class="keyword">on</span> Consumer(userNo,userName,tel,email)</span><br><span class="line"><span class="keyword">drop</span> index Consumer.i_consumer</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>租赁信息非聚集索引</strong>：便于管理员更好地查询修改租赁表中的相关信息。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*为租赁表的车主及车辆建立索引i_hire*/</span></span><br><span class="line"><span class="keyword">create</span> nonclustered</span><br><span class="line">index i_hire</span><br><span class="line"><span class="keyword">on</span> Hire(userNo,carNo)</span><br><span class="line"><span class="keyword">drop</span> index Hire.i_hire</span><br></pre></td></tr></table></figure>
+
+<h4 id="✔视图"><a href="#✔视图" class="headerlink" title="✔视图"></a>✔视图</h4><ul>
+<li><strong>个人信息视图</strong>：此视图以“王兰”为例，用户可以随时查看自己的个人信息，并对相关信息进行修改。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> vPersonalInfo</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">select</span> userName,psd,tel,email,identifycard</span><br><span class="line"><span class="keyword">from</span> consumer</span><br><span class="line"><span class="keyword">where</span> userName <span class="operator">=</span> <span class="string">&#x27;王兰&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>车辆信息视图</strong>：便于客户根据自身需要查询车辆，知晓车辆的相关信息。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> vCarInfo</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">select</span> carNo,className,carName,brandName,rent,shopDate</span><br><span class="line"><span class="keyword">from</span> Car c,CarClass cc</span><br><span class="line"><span class="keyword">where</span> cc.classNo <span class="operator">=</span> c.classNo </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>租赁信息视图</strong>：此视图可以查看每一条租赁记录，便于管理员查看过往的租赁记录，并知晓哪些车辆已被租赁，并对逾期未归还车辆的客户及时联系，同时也便于用户查询自己的租赁信息。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> vHireInfo</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">select</span> h.rid,c.userNo,carName,brandName,hireDate,shouldDate,returndate,tel,email</span><br><span class="line"><span class="keyword">from</span> Hire h,Consumer c,Car</span><br><span class="line"><span class="keyword">where</span> c.userNo <span class="operator">=</span> h.userNo <span class="keyword">and</span> car.carNo <span class="operator">=</span> h.carNo</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据库触发器"><a href="#数据库触发器" class="headerlink" title="数据库触发器"></a>数据库触发器</h3><ul>
+<li>管理员在租赁业务表中插入租用信息时，通过不同用户的账号，对账户中的租用数量自动增加，若车辆已经归还（即returnDate不为空），则不会记录在客户的租赁数量中。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> tgUpdateCount </span><br><span class="line"><span class="keyword">on</span> hire</span><br><span class="line">after <span class="keyword">insert</span></span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	<span class="keyword">declare</span> <span class="variable">@returnDate</span> datetime</span><br><span class="line">	<span class="keyword">select</span> <span class="variable">@returnDate</span> <span class="operator">=</span> returnDate <span class="keyword">from</span> inserted</span><br><span class="line">	if(<span class="variable">@returnDate</span> <span class="keyword">is</span> <span class="keyword">null</span>)</span><br><span class="line">	<span class="keyword">begin</span></span><br><span class="line">		update consumer</span><br><span class="line">		<span class="keyword">set</span> hireCount <span class="operator">+</span><span class="operator">=</span> <span class="number">1</span></span><br><span class="line">		<span class="keyword">where</span> userNo <span class="operator">=</span> </span><br><span class="line">		(</span><br><span class="line">		<span class="keyword">select</span> i.userNo</span><br><span class="line">		<span class="keyword">from</span> inserted i</span><br><span class="line">		)</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>客户租用车辆的上限为6辆，若已经租用了6辆，系统将自动不再受理租赁业务。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> tgLimitation</span><br><span class="line"><span class="keyword">on</span> hire</span><br><span class="line">after <span class="keyword">insert</span></span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	<span class="keyword">declare</span> <span class="variable">@userno</span> <span class="type">varchar</span>(<span class="number">20</span>)</span><br><span class="line">	<span class="keyword">declare</span> <span class="variable">@num</span> tinyint</span><br><span class="line">	<span class="keyword">declare</span> <span class="variable">@msg</span> <span class="type">varchar</span>(<span class="number">200</span>)</span><br><span class="line">	<span class="keyword">select</span> <span class="variable">@userNo</span> <span class="operator">=</span> userNo <span class="keyword">from</span> inserted</span><br><span class="line">	<span class="keyword">select</span> <span class="variable">@num</span> <span class="operator">=</span> <span class="built_in">count</span>(<span class="operator">*</span>)</span><br><span class="line">	<span class="keyword">from</span> hire</span><br><span class="line">	<span class="keyword">where</span> userNo <span class="operator">=</span> <span class="variable">@userNo</span> <span class="keyword">and</span> returnDate <span class="keyword">is</span> <span class="keyword">null</span></span><br><span class="line">	if(<span class="variable">@num</span><span class="operator">&gt;</span><span class="number">6</span>)</span><br><span class="line">	<span class="keyword">begin</span> </span><br><span class="line">		<span class="keyword">rollback</span> transaction</span><br><span class="line">		<span class="keyword">set</span> <span class="variable">@msg</span> <span class="operator">=</span> <span class="string">&#x27;对不起，您已达租用上限（6辆）！&#x27;</span></span><br><span class="line">		raiserror(<span class="variable">@msg</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <div>
+            
+                  <div>
+
+<div style="text-align:center;color:#bfbfbf;font-size:16px;">
+<span>-------- 🎈本文结束 </span>
+<span>感谢阅读🎈 --------</span>
+</div>
+
+</div>
+            
+      </div>
+        <div class="reward-container">
+  <div>感謝老闆支持!</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打賞
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="BlankFancy 支付寶">
+        <p>支付寶</p>
+      </div>
+
+  </div>
+</div>
+
+      
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/SQL/" rel="tag"><i class="fa fa-tag"></i> SQL</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/" rel="tag"><i class="fa fa-tag"></i> 数据库设计</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/08/13/%E4%BB%8A%E6%97%A5%E4%B8%AD%E5%9B%BD%E5%8A%A8%E6%BC%AB%E5%9C%A8%E6%97%A5%E6%9C%AC/" rel="prev" title="今日中国动漫在日本">
+      <i class="fa fa-chevron-left"></i> 今日中国动漫在日本
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/" rel="next" title="“识货”球鞋价格分析">
+      “识货”球鞋价格分析 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概覽
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E8%AF%AD"><span class="nav-text">随语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E8%AE%BE%E6%83%B3"><span class="nav-text">系统功能设想</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%9C%94%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E"><span class="nav-text">✔对象说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%9C%94%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E"><span class="nav-text">✔功能说明</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%F0%9F%92%AB%E7%AE%A1%E7%90%86%E5%91%98%E6%A8%A1%E5%9D%97"><span class="nav-text">💫管理员模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%F0%9F%92%AB%E5%AE%A2%E6%88%B7%E6%A8%A1%E5%9D%97"><span class="nav-text">💫客户模块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E8%AE%BE%E8%AE%A1"><span class="nav-text">概念设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%9C%94%E7%9B%AE%E6%A0%87"><span class="nav-text">✔目标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%9C%94%E5%AE%9E%E4%BD%93"><span class="nav-text">✔实体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%9C%94E-R%E5%9B%BE"><span class="nav-text">✔E-R图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1"><span class="nav-text">逻辑设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%9C%94E-R%E5%9B%BE%E5%88%B0%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-text">✔E-R图到关系模式的转换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E4%B8%8E%E8%A7%86%E5%9B%BE"><span class="nav-text">数据库索引与视图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%9C%94%E7%B4%A2%E5%BC%95"><span class="nav-text">✔索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%9C%94%E8%A7%86%E5%9B%BE"><span class="nav-text">✔视图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="nav-text">数据库触发器</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlankFancy"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">BlankFancy</p>
+  <div class="site-description" itemprop="description">“失敗大不了從頭來過。”</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlankFancy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlankFancy" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/BlankFancy_02" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;BlankFancy_02" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+      
+
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+            <h3 class="widget-title">Tag Cloud</h3>
+            <div id="myCanvasContainer" class="widget tagcloud">
+                  <canvas width="250" height="250" id="resCanvas" style="width:100%">
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/" rel="tag">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IAAS/" rel="tag">IAAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenGL/" rel="tag">OpenGL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PaaS/" rel="tag">PaaS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/" rel="tag">SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SaaS/" rel="tag">SaaS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scrapy/" rel="tag">Scrapy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Struts2/" rel="tag">Struts2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/" rel="tag">云计算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%BC%AB/" rel="tag">动漫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/" rel="tag">数据库设计</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" rel="tag">计算机图形学</a><span class="tag-list-count">1</span></li></ul>
+                  </canvas>
+          </div>
+      </div>
+      
+
+      <div id="music163player">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=0&id=4864308325&auto=1&height=32">
+          </iframe>
+      </div>
+
+
+
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BlankFancy</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站點總字數">27k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站點閱讀時長">24 分鍾</span>
+</div><script color="130,130,130" opacity="0.5" zIndex="-1" count="299" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'icawYuOQjAP79YaEXmXRJRaC-gzGzoHsz',
+      appKey     : 'VNFXON1APS8PRFdvxvdwWvrc',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"display":{"position":"right","width":150,"height":300,"hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacity":0.9},"log":false});</script></body>
+</html>

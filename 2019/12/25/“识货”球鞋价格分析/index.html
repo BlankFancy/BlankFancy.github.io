@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":false,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="随语球鞋又溢价了…就搞不懂大众跟风能把市场作成这种亚子(&#x3D;_&#x3D;) 水是越来越深了，算了算了咱不跟风，价格你可劲涨，我买算我输（￢㉨￢）反正好看的鞋子海了去了，总有贩子看不上的🙃干脆去网上爬爬现在的球鞋数据分析一波好了嘿嘿嘿~ 源码数据👉基于Scrapy的网站球鞋价格分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“识货”球鞋价格分析">
+<meta property="og:url" content="http://example.com/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="FIRE">
+<meta property="og:description" content="随语球鞋又溢价了…就搞不懂大众跟风能把市场作成这种亚子(&#x3D;_&#x3D;) 水是越来越深了，算了算了咱不跟风，价格你可劲涨，我买算我输（￢㉨￢）反正好看的鞋子海了去了，总有贩子看不上的🙃干脆去网上爬爬现在的球鞋数据分析一波好了嘿嘿嘿~ 源码数据👉基于Scrapy的网站球鞋价格分析">
+<meta property="og:locale" content="zh_HK">
+<meta property="og:image" content="http://example.com/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/steam.jpg">
+<meta property="og:image" content="http://example.com/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/1.png">
+<meta property="og:image" content="http://example.com/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/%E5%93%81%E7%89%8C%E5%B8%82%E5%9C%BA%E5%8D%A0%E6%AF%941.JPG">
+<meta property="og:image" content="http://example.com/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/%E5%93%81%E7%89%8C%E5%B8%82%E5%9C%BA%E5%8D%A0%E6%AF%942.JPG">
+<meta property="og:image" content="http://example.com/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/xf.png">
+<meta property="article:published_time" content="2019-12-25T12:55:46.000Z">
+<meta property="article:modified_time" content="2021-03-17T09:55:29.483Z">
+<meta property="article:author" content="BlankFancy">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Scrapy">
+<meta property="article:tag" content="数据分析">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/steam.jpg">
+
+<link rel="canonical" href="http://example.com/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-HK'
+  };
+</script>
+
+  <title>“识货”球鞋价格分析 | FIRE</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">FIRE</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Nothing is impossible</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>檢索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/BlankFancy" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-HK">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="BlankFancy">
+      <meta itemprop="description" content="“失敗大不了從頭來過。”">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FIRE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          “识货”球鞋价格分析
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2019-12-25 20:55:46" itemprop="dateCreated datePublished" datetime="2019-12-25T20:55:46+08:00">2019-12-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Project-Design/" itemprop="url" rel="index"><span itemprop="name">Project Design</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/" class="post-meta-item leancloud_visitors" data-flag-title="“识货”球鞋价格分析" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字數：</span>
+              <span>3.3k</span>
+            </span>
+            <span class="post-meta-item" title="閱讀時長">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+              <span>3 分鍾</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/steam.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>球鞋又溢价了…就搞不懂大众跟风能把市场作成这种亚子(=_=)</p>
+<p>水是越来越深了，算了算了咱不跟风，价格你可劲涨，我买算我输（￢㉨￢）反正好看的鞋子海了去了，总有贩子看不上的🙃干脆去网上爬爬现在的球鞋数据分析一波好了嘿嘿嘿~</p>
+<p>源码数据👉<a target="_blank" rel="noopener" href="https://download.csdn.net/download/Qyy2079628327/15792682">基于Scrapy的网站球鞋价格分析</a></p>
+<span id="more"></span>
+
+<h3 id="市场分析"><a href="#市场分析" class="headerlink" title="市场分析"></a>市场分析</h3><p>现在玩鞋的人基本都是年轻人或是学生党，因为NBA盛行的缘故，当下大多热门的球鞋均为<strong>篮球鞋</strong>，而篮球鞋的目标受众一般有两种：</p>
+<ol>
+<li>以球鞋为特殊收藏品的<strong>球鞋爱好者</strong>，搜集各种各样的球鞋只为放在陈列柜里，这类人多数富有，对于球鞋的价格几乎是一种无所谓的态度，多少钱只要自己喜欢都会收。</li>
+<li>热爱篮球的实战党，球鞋在高强度的篮球训练或篮球比赛种会快速磨损，所以对于实战党来说，球鞋的更换频率极高。</li>
+</ol>
+<p>一双热门的鞋款几乎都要千元人民币左右，这对于学生党而言并不是小数目，而且就算购置，这些鞋款也不一定适用于实战，所以对于这类学生党或是年轻人，面对时下如此庞大的市场，如何选购一双价格亲民、品牌靠得住、适用于实战的球鞋，是他们最最需要的。</p>
+<h3 id="概要设计"><a href="#概要设计" class="headerlink" title="概要设计"></a>概要设计</h3><h4 id="技术栈选型：Matplotlab"><a href="#技术栈选型：Matplotlab" class="headerlink" title="技术栈选型：Matplotlab"></a>技术栈选型：<font color="green">Matplotlab</font></h4><p><font color="green">Matplotlib</font>是Python基础的2D绘图库，可以将原始数据处理成柱状图、散点图、条形图等等图形，基于此项目并没有很多数据，而且需要将数据直观化，所以项目的技术栈选用<font color="green">Matplotlib</font>。</p>
+<h4 id="数据爬取总体流程"><a href="#数据爬取总体流程" class="headerlink" title="数据爬取总体流程"></a>数据爬取总体流程</h4><p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/1.png"></p>
+<h3 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h3><h4 id="数据源说明"><a href="#数据源说明" class="headerlink" title="数据源说明"></a>数据源说明</h4><p><font color="grey" size="2">球鞋数据基于”识货”网站，此站包含全网各球鞋的最低价，考虑到鞋子因尺码同款不同价，此数据分析仅供参考</font></p>
+<p>当下热门的球鞋交易网站有很多，比如“stockx”、“识货”、“淘宝”，但相较而言，“stockx”作为一个海外网站，爬取延时较高，数据爬取存在损失的问题，“淘宝”多数都无法辨认真伪，假冒、水货的风险较高，以一个球鞋狂热爱好者的角度，“识货”网站上的数据更加可靠，而且分析结果面向的受众多为学生，“识货”的全网最低价很显然符合本项目的需求，因此爬取此网站上的数据。</p>
+<p>球鞋品牌种类众多，旗下不同类型的球鞋更加如此，所以，为了在短时间内能高效地分析出所需的球鞋数据，爬取“识货”球鞋排行榜的数据，排行版可以直接反馈当前市场上最热门的鞋款，选取前10页的内容，每页内容均有60双鞋，所以获取对象就是600双鞋，本项目就基于着600双鞋的部分鞋款进行详细分析。</p>
+<h4 id="数据表说明"><a href="#数据表说明" class="headerlink" title="数据表说明"></a>数据表说明</h4><table>
+<thead>
+<tr>
+<th align="center">字段英文名</th>
+<th align="center">字段中文名</th>
+<th align="center">数据类型与精度</th>
+<th align="center">是否主外键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">serial number</td>
+<td align="center">序号</td>
+<td align="center">integer</td>
+<td align="center">主键</td>
+</tr>
+<tr>
+<td align="center">sneaker Name</td>
+<td align="center">球鞋名称</td>
+<td align="center">string</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">price</td>
+<td align="center">价格</td>
+<td align="center">float (.2f)</td>
+<td align="center">否</td>
+</tr>
+</tbody></table>
+<h3 id="具体问题解决方案"><a href="#具体问题解决方案" class="headerlink" title="具体问题解决方案"></a>具体问题解决方案</h3><h4 id="网站难以爬取"><a href="#网站难以爬取" class="headerlink" title="网站难以爬取"></a>网站难以爬取</h4><p>在选取网站方面，由于部分网站的限制要求较高，不容易爬取网站上的数据，查阅网络资料获知爬取此类网站需要先<strong>伪装服务器</strong>，将request中的header值进行部分的修改。在爬虫进行之前，可以复制网页url到<a target="_blank" rel="noopener" href="https://curl.trillworks.com/">Convert curl syntax to Python</a>将header值在提交时进行修改。</p>
+<h4 id="绘制图标时中文无法显示"><a href="#绘制图标时中文无法显示" class="headerlink" title="绘制图标时中文无法显示"></a>绘制图标时中文无法显示</h4><p>在获取完网页的完整信息的情况下，对基础信息进行汇总作图，发现X轴、Y轴的具体名称无法使用中文输入，查阅资料，得到与<font color="green">Matplotlib</font>相关的代码修改。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 中文显示</span></span><br><span class="line">matplotlib.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]</span><br><span class="line">matplotlib.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="垂直直方图的数据显示位置存在问题"><a href="#垂直直方图的数据显示位置存在问题" class="headerlink" title="垂直直方图的数据显示位置存在问题"></a>垂直直方图的数据显示位置存在问题</h4><p><font color="green">Matplotlib</font>自带的垂直直方图并没有确定数据显示位置的函数（有可能没查到），每柱的数据显示在中间更加直观，所以就通过修改height和width值的方法，把数据显示的位置调整至中间，问题解决。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用于垂直柱状图数据显示</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">autolabel</span>(<span class="params">rects</span>):</span></span><br><span class="line">    <span class="keyword">for</span> rect <span class="keyword">in</span> rects:</span><br><span class="line">        height = rect.get_height()</span><br><span class="line">        plt.text(rect.get_x()+rect.get_width()/<span class="number">2.</span> - <span class="number">0.05</span>, <span class="number">1.01</span>*height, <span class="string">&#x27;%s&#x27;</span> % <span class="built_in">int</span>(height))</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据分析-amp-可视化"><a href="#数据分析-amp-可视化" class="headerlink" title="数据分析&amp;可视化"></a>数据分析&amp;可视化</h3><p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/%E5%93%81%E7%89%8C%E5%B8%82%E5%9C%BA%E5%8D%A0%E6%AF%941.JPG"></p>
+<p>通过网络爬虫获取网站数据，进行分类汇总，根据各品牌在市场的占比进行排序，使用水平柱状图将数据分析的结果进行呈现，“Nike”品牌高居榜首，占比超25%，而在最后的AND1、Time、回力、Equalizer和New Balance几乎看不出占比差距，相对以上品牌算是冷门品牌，因此<strong>不作为此次的分析对象</strong>。</p>
+<p>为了分析的对象更具有针对性，所以将所有占比<strong>计算均值</strong>，占比大于均值的球鞋品牌进行下一轮的分析，但不难看出，尽管已经做了排序，但占比的差异性无法体现出来，所以接下来的分析不再使用水平柱状图进行显示。相比较而言，饼图更合适。</p>
+<p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/%E5%93%81%E7%89%8C%E5%B8%82%E5%9C%BA%E5%8D%A0%E6%AF%942.JPG"></p>
+<p>基于获得的饼图，获得了在市场占比大于均值的前7 的球鞋品牌，分别是“Nike”、“李宁”、“Jordan”、“adidas”、“Air Jordan”、“安踏”和“匹克”，通过饼图可以看出前3名直接占据了整个饼图的50%，所以下一步的分析对象就是排行前3的品牌，分别是“Nike”、“Jordan”和“李宁”。</p>
+<p><font color="grey" size="2">“Air Jordan”和“Jordan”其实均属于“Nike”的旗下品牌，但“Jordan”和“Air Jordan”是迈克尔·乔丹的独创品牌，和“Nike”的主创球鞋还是有些差异，因此分开，“Jordan”和“Air Jordan”的差异仅在于“Air Jordan”是乔丹正代（经典鞋款），所以把“Air Jordan”的球鞋放入“Jordan”鞋款一并分析</font></p>
+<p>为了分析的结果更加具体，所以将球鞋依照品牌分类分析，因为需要划分价格区间，所以首先要获取3个品牌的价格最大值，通过排序获得最贵的球鞋<font color="deepskyblue"><strong>Nike Shox VC III</strong></font>，售价3899元，因而价格的全区间就为<strong>0-4000</strong>，再根据500进行细分：</p>
+<p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/xf.png"></p>
+<p>每个品牌的价格集中区一目了然，“Nike”价格多集中在500-1000中，“李宁”价格多集中在0-500中，而“Jordan”在0-500和500-1000这两个价格区间的球鞋款式数量不相上下，且Nike是唯一具有2500元以上鞋款的品牌。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>基于“识货”网站热门球鞋排行版所获取前600的球鞋，通过详细的数据分析，以及绘图结果可知：</p>
+<ul>
+<li><p>通过对球鞋的品牌分析可知，进入球鞋领域的品牌数量远超想象，仅仅排行前600的球鞋就有21个品牌；</p>
+</li>
+<li><p>当下球鞋行业的领头品牌是“Nike”、“李宁”和 “Jordan”三个品牌；</p>
+</li>
+<li><p>和预想的结果不同，在普通人的眼中，“Nike”和“adidas”均是鞋企的首屈一指，但“adidas”并未进入前三的行列，位次“Jordan”，排行第四；</p>
+</li>
+<li><p>基于“识货”这一宣称全网最低价的球鞋网站，获得的最低球鞋价格和市面上流通的大多数球鞋的价格相比相差甚远，可知当前市场球鞋价格虚高的现象非常严重，球鞋爱好者因此现象深受伤害；</p>
+</li>
+<li><p>将“李宁”、“Nike”和“Jordan”三个品牌的球鞋分开逐一分析，并基于价格区间进行分类汇总，得知“李宁”品牌的价格多为0-500元，Jordan也没有想象中的昂贵，价格也都集中在0-500元，而Nike的大多数球鞋价格均在500-1000元，且是三个品牌唯一一个有超过2500元球鞋的品牌；</p>
+</li>
+<li><p>基于以上的价格分析，不难看出，“李宁”的价格更为亲民，比较适合喜爱球鞋的学生党，而“Nike”基于它“老大哥”的地位，报价相对而言较高，对于实战的需要频繁换鞋的学生而言并不适合；</p>
+</li>
+<li><p>对它们价格集中的区间进行详细分析，获取区间的品牌价格天梯，“Nike”就算是低于1000元也有很多999.99元的球鞋，不难猜测球鞋爱好者买账的原因绝大多数还是“Nike”的品牌效应</p>
+</li>
+</ul>
+<p>作为一名球鞋爱好者，面对当下鞋贩子盛行、球鞋价格满天飞的状况着实头大，而“识货”提供了全网每双球鞋的最低价格的购买路径，所以可以基于此网站的数据，对热门球鞋的价格进行详细分析，便于未来购买自己喜爱的鞋款，而且，如果未来能够从其他网站平台获取更多的相关数据，可以通过深度学习对每双自己想要购置的球鞋进行价格预测，躲开鞋贩子挖下的雷区❤。</p>
+
+    </div>
+
+    
+    
+    
+
+      <div>
+            
+                  <div>
+
+<div style="text-align:center;color:#bfbfbf;font-size:16px;">
+<span>-------- 🎈本文结束 </span>
+<span>感谢阅读🎈 --------</span>
+</div>
+
+</div>
+            
+      </div>
+        <div class="reward-container">
+  <div>感謝老闆支持!</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打賞
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="BlankFancy 支付寶">
+        <p>支付寶</p>
+      </div>
+
+  </div>
+</div>
+
+      
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/Scrapy/" rel="tag"><i class="fa fa-tag"></i> Scrapy</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 数据分析</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/" rel="prev" title="车辆租赁系统的数据库设计">
+      <i class="fa fa-chevron-left"></i> 车辆租赁系统的数据库设计
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/06/%E5%9F%BA%E4%BA%8Estruts2%E5%92%8Chibernate%E7%9A%84%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/" rel="next" title="基于Struts2和Hibernate的简易博客">
+      基于Struts2和Hibernate的简易博客 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概覽
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E8%AF%AD"><span class="nav-text">随语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%82%E5%9C%BA%E5%88%86%E6%9E%90"><span class="nav-text">市场分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1"><span class="nav-text">概要设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88%E9%80%89%E5%9E%8B%EF%BC%9AMatplotlab"><span class="nav-text">技术栈选型：Matplotlab</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96%E6%80%BB%E4%BD%93%E6%B5%81%E7%A8%8B"><span class="nav-text">数据爬取总体流程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1"><span class="nav-text">详细设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%BA%90%E8%AF%B4%E6%98%8E"><span class="nav-text">数据源说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E8%AF%B4%E6%98%8E"><span class="nav-text">数据表说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text">具体问题解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E9%9A%BE%E4%BB%A5%E7%88%AC%E5%8F%96"><span class="nav-text">网站难以爬取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E5%9B%BE%E6%A0%87%E6%97%B6%E4%B8%AD%E6%96%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA"><span class="nav-text">绘制图标时中文无法显示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9E%82%E7%9B%B4%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%9A%84%E6%95%B0%E6%8D%AE%E6%98%BE%E7%A4%BA%E4%BD%8D%E7%BD%AE%E5%AD%98%E5%9C%A8%E9%97%AE%E9%A2%98"><span class="nav-text">垂直直方图的数据显示位置存在问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-amp-%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text">数据分析&amp;可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-text">结论</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlankFancy"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">BlankFancy</p>
+  <div class="site-description" itemprop="description">“失敗大不了從頭來過。”</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlankFancy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlankFancy" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/BlankFancy_02" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;BlankFancy_02" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+      
+
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+            <h3 class="widget-title">Tag Cloud</h3>
+            <div id="myCanvasContainer" class="widget tagcloud">
+                  <canvas width="250" height="250" id="resCanvas" style="width:100%">
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/" rel="tag">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IAAS/" rel="tag">IAAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenGL/" rel="tag">OpenGL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PaaS/" rel="tag">PaaS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/" rel="tag">SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SaaS/" rel="tag">SaaS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scrapy/" rel="tag">Scrapy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Struts2/" rel="tag">Struts2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/" rel="tag">云计算</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%BC%AB/" rel="tag">动漫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/" rel="tag">数据库设计</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" rel="tag">计算机图形学</a><span class="tag-list-count">1</span></li></ul>
+                  </canvas>
+          </div>
+      </div>
+      
+
+      <div id="music163player">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=0&id=4864308325&auto=1&height=32">
+          </iframe>
+      </div>
+
+
+
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BlankFancy</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站點總字數">27k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站點閱讀時長">24 分鍾</span>
+</div><script color="130,130,130" opacity="0.5" zIndex="-1" count="299" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'icawYuOQjAP79YaEXmXRJRaC-gzGzoHsz',
+      appKey     : 'VNFXON1APS8PRFdvxvdwWvrc',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"display":{"position":"right","width":150,"height":300,"hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacity":0.9},"log":false});</script></body>
+</html>

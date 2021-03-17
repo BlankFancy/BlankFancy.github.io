@@ -2,9 +2,9 @@
 <search>
   <entry>
     <title>Markdown笔记</title>
-    <url>/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p><img src="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/anime-girl.jpg"></p>
-<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>码农没有个人博客属实毫无牌面，最近接触的Markdown语法特别方便的同时且容易上手，对于hexo、 jekyll、hugo框架的博客非常好用，下面就罗列一下正常会使用的语法，以及在学习过程中遇到的一些坑。</p>
+    <url>/2019/05/20/Markdown%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><img src="/2019/05/20/Markdown%E7%AC%94%E8%AE%B0/anime-girl.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>最近刚刚接触Markdown语法，个人感觉特别方便的且非常容易上手，同时又对hexo、 jekyll、hugo框架的博客非常好用，下面就罗列一下正常会使用的语法，以及在学习过程中遇到的一些坑。</p>
 <p>参考教程👉<a href="https://www.bilibili.com/video/BV1hJ411X75X">【使用教程】15分钟快速上手Markdown教程 </a></p>
 <span id="more"></span>
 
@@ -21,10 +21,10 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;Hello World!&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <h3 id="5-图片"><a href="#5-图片" class="headerlink" title="5. 图片"></a>5. 图片</h3><p>​    格式：![命名的图片名称](网络/本地图片路径)</p>
-<p>​    eg. ![网络图片](<a href="https://pic.netbian.com/uploads/allimg/180803/084010-15332568107994.jpg">https://pic.netbian.com/uploads/allimg/180803/084010-15332568107994.jpg</a>)</p>
-<p><img src="https://pic.netbian.com/uploads/allimg/180803/084010-15332568107994.jpg" alt="网络图片"></p>
+<p>​    eg. ![网络图片](<a href="https://wallpapershome.com/images/pages/pic_h/23165.jpg">https://wallpapershome.com/images/pages/pic_h/23165.jpg</a>)</p>
+<p><img src="https://wallpapershome.com/images/pages/pic_h/23165.jpg" alt="网络图片"></p>
 <p>​        eg. ![本地图片](wallpaper.jpg)    </p>
-<p>​    <img src="/2020/10/02/Markdown%E7%AC%94%E8%AE%B0/wallpaper.jpg" alt="本地图片"></p>
+<p>​    <img src="/2019/05/20/Markdown%E7%AC%94%E8%AE%B0/wallpaper.jpg" alt="本地图片"></p>
 <p>​    网络图片需要<font color="red"><strong>复制图片地址</strong></font>非复制路径地址</p>
 <h3 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6. 超链接"></a>6. 超链接</h3><p>​    格式： [超链接名称](链接地址)</p>
 <p>​     eg. <a href="www.bilibili.com">Bilibili</a>([Bilibili](<a href="http://www.bilibili.com/">www.bilibili.com</a>))</p>
@@ -56,7 +56,7 @@
 <td>GG</td>
 </tr>
 </tbody></table>
-<h3 id="9-引用"><a href="#9-引用" class="headerlink" title="9. 引用"></a>9. 引用</h3><p>​    格式：&gt;引用</p>
+<h3 id="9-引用"><a href="#9-引用" class="headerlink" title="9.  引用"></a>9.  引用</h3><p>​    格式：&gt;引用</p>
 <p>​    几个&gt;就是几级引用</p>
 <blockquote>
 <p>一级引用</p>
@@ -69,25 +69,493 @@
 </blockquote>
 ]]></content>
       <categories>
-        <category>實用Tips</category>
+        <category>Practical Tips</category>
       </categories>
       <tags>
         <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
-    <title>new test</title>
-    <url>/2018/03/09/new-test/</url>
-    <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h4 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h4><blockquote class="blockquote-center">blah blah blah</blockquote> 
-<!-- 标签 方式，要求版本在0.4.5或以上 --> 
-<blockquote class="blockquote-center">
-            <p>blah blah blah</p>
+    <title>“识货”球鞋价格分析</title>
+    <url>/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/steam.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>球鞋又溢价了…就搞不懂大众跟风能把市场作成这种亚子(=_=)</p>
+<p>水是越来越深了，算了算了咱不跟风，价格你可劲涨，我买算我输（￢㉨￢）反正好看的鞋子海了去了，总有贩子看不上的🙃干脆去网上爬爬现在的球鞋数据分析一波好了嘿嘿嘿~</p>
+<p>源码数据👉<a href="https://download.csdn.net/download/Qyy2079628327/15792682">基于Scrapy的网站球鞋价格分析</a></p>
+<span id="more"></span>
 
-          </blockquote> 
-<!-- 标签别名 -->
-<blockquote class="blockquote-center">
-            <p>blah blah blah </p>
+<h3 id="市场分析"><a href="#市场分析" class="headerlink" title="市场分析"></a>市场分析</h3><p>现在玩鞋的人基本都是年轻人或是学生党，因为NBA盛行的缘故，当下大多热门的球鞋均为<strong>篮球鞋</strong>，而篮球鞋的目标受众一般有两种：</p>
+<ol>
+<li>以球鞋为特殊收藏品的<strong>球鞋爱好者</strong>，搜集各种各样的球鞋只为放在陈列柜里，这类人多数富有，对于球鞋的价格几乎是一种无所谓的态度，多少钱只要自己喜欢都会收。</li>
+<li>热爱篮球的实战党，球鞋在高强度的篮球训练或篮球比赛种会快速磨损，所以对于实战党来说，球鞋的更换频率极高。</li>
+</ol>
+<p>一双热门的鞋款几乎都要千元人民币左右，这对于学生党而言并不是小数目，而且就算购置，这些鞋款也不一定适用于实战，所以对于这类学生党或是年轻人，面对时下如此庞大的市场，如何选购一双价格亲民、品牌靠得住、适用于实战的球鞋，是他们最最需要的。</p>
+<h3 id="概要设计"><a href="#概要设计" class="headerlink" title="概要设计"></a>概要设计</h3><h4 id="技术栈选型：Matplotlab"><a href="#技术栈选型：Matplotlab" class="headerlink" title="技术栈选型：Matplotlab"></a>技术栈选型：<font color="green">Matplotlab</font></h4><p><font color="green">Matplotlib</font>是Python基础的2D绘图库，可以将原始数据处理成柱状图、散点图、条形图等等图形，基于此项目并没有很多数据，而且需要将数据直观化，所以项目的技术栈选用<font color="green">Matplotlib</font>。</p>
+<h4 id="数据爬取总体流程"><a href="#数据爬取总体流程" class="headerlink" title="数据爬取总体流程"></a>数据爬取总体流程</h4><p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/1.png"></p>
+<h3 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h3><h4 id="数据源说明"><a href="#数据源说明" class="headerlink" title="数据源说明"></a>数据源说明</h4><p><font color="grey" size="2">球鞋数据基于”识货”网站，此站包含全网各球鞋的最低价，考虑到鞋子因尺码同款不同价，此数据分析仅供参考</font></p>
+<p>当下热门的球鞋交易网站有很多，比如“stockx”、“识货”、“淘宝”，但相较而言，“stockx”作为一个海外网站，爬取延时较高，数据爬取存在损失的问题，“淘宝”多数都无法辨认真伪，假冒、水货的风险较高，以一个球鞋狂热爱好者的角度，“识货”网站上的数据更加可靠，而且分析结果面向的受众多为学生，“识货”的全网最低价很显然符合本项目的需求，因此爬取此网站上的数据。</p>
+<p>球鞋品牌种类众多，旗下不同类型的球鞋更加如此，所以，为了在短时间内能高效地分析出所需的球鞋数据，爬取“识货”球鞋排行榜的数据，排行版可以直接反馈当前市场上最热门的鞋款，选取前10页的内容，每页内容均有60双鞋，所以获取对象就是600双鞋，本项目就基于着600双鞋的部分鞋款进行详细分析。</p>
+<h4 id="数据表说明"><a href="#数据表说明" class="headerlink" title="数据表说明"></a>数据表说明</h4><table>
+<thead>
+<tr>
+<th align="center">字段英文名</th>
+<th align="center">字段中文名</th>
+<th align="center">数据类型与精度</th>
+<th align="center">是否主外键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">serial number</td>
+<td align="center">序号</td>
+<td align="center">integer</td>
+<td align="center">主键</td>
+</tr>
+<tr>
+<td align="center">sneaker Name</td>
+<td align="center">球鞋名称</td>
+<td align="center">string</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">price</td>
+<td align="center">价格</td>
+<td align="center">float (.2f)</td>
+<td align="center">否</td>
+</tr>
+</tbody></table>
+<h3 id="具体问题解决方案"><a href="#具体问题解决方案" class="headerlink" title="具体问题解决方案"></a>具体问题解决方案</h3><h4 id="网站难以爬取"><a href="#网站难以爬取" class="headerlink" title="网站难以爬取"></a>网站难以爬取</h4><p>在选取网站方面，由于部分网站的限制要求较高，不容易爬取网站上的数据，查阅网络资料获知爬取此类网站需要先<strong>伪装服务器</strong>，将request中的header值进行部分的修改。在爬虫进行之前，可以复制网页url到<a href="https://curl.trillworks.com/">Convert curl syntax to Python</a>将header值在提交时进行修改。</p>
+<h4 id="绘制图标时中文无法显示"><a href="#绘制图标时中文无法显示" class="headerlink" title="绘制图标时中文无法显示"></a>绘制图标时中文无法显示</h4><p>在获取完网页的完整信息的情况下，对基础信息进行汇总作图，发现X轴、Y轴的具体名称无法使用中文输入，查阅资料，得到与<font color="green">Matplotlib</font>相关的代码修改。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 中文显示</span></span><br><span class="line">matplotlib.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]</span><br><span class="line">matplotlib.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 
-          </blockquote>]]></content>
+<h4 id="垂直直方图的数据显示位置存在问题"><a href="#垂直直方图的数据显示位置存在问题" class="headerlink" title="垂直直方图的数据显示位置存在问题"></a>垂直直方图的数据显示位置存在问题</h4><p><font color="green">Matplotlib</font>自带的垂直直方图并没有确定数据显示位置的函数（有可能没查到），每柱的数据显示在中间更加直观，所以就通过修改height和width值的方法，把数据显示的位置调整至中间，问题解决。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 用于垂直柱状图数据显示</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">autolabel</span>(<span class="params">rects</span>):</span></span><br><span class="line">    <span class="keyword">for</span> rect <span class="keyword">in</span> rects:</span><br><span class="line">        height = rect.get_height()</span><br><span class="line">        plt.text(rect.get_x()+rect.get_width()/<span class="number">2.</span> - <span class="number">0.05</span>, <span class="number">1.01</span>*height, <span class="string">&#x27;%s&#x27;</span> % <span class="built_in">int</span>(height))</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据分析-amp-可视化"><a href="#数据分析-amp-可视化" class="headerlink" title="数据分析&amp;可视化"></a>数据分析&amp;可视化</h3><p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/%E5%93%81%E7%89%8C%E5%B8%82%E5%9C%BA%E5%8D%A0%E6%AF%941.JPG"></p>
+<p>通过网络爬虫获取网站数据，进行分类汇总，根据各品牌在市场的占比进行排序，使用水平柱状图将数据分析的结果进行呈现，“Nike”品牌高居榜首，占比超25%，而在最后的AND1、Time、回力、Equalizer和New Balance几乎看不出占比差距，相对以上品牌算是冷门品牌，因此<strong>不作为此次的分析对象</strong>。</p>
+<p>为了分析的对象更具有针对性，所以将所有占比<strong>计算均值</strong>，占比大于均值的球鞋品牌进行下一轮的分析，但不难看出，尽管已经做了排序，但占比的差异性无法体现出来，所以接下来的分析不再使用水平柱状图进行显示。相比较而言，饼图更合适。</p>
+<p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/%E5%93%81%E7%89%8C%E5%B8%82%E5%9C%BA%E5%8D%A0%E6%AF%942.JPG"></p>
+<p>基于获得的饼图，获得了在市场占比大于均值的前7 的球鞋品牌，分别是“Nike”、“李宁”、“Jordan”、“adidas”、“Air Jordan”、“安踏”和“匹克”，通过饼图可以看出前3名直接占据了整个饼图的50%，所以下一步的分析对象就是排行前3的品牌，分别是“Nike”、“Jordan”和“李宁”。</p>
+<p><font color="grey" size="2">“Air Jordan”和“Jordan”其实均属于“Nike”的旗下品牌，但“Jordan”和“Air Jordan”是迈克尔·乔丹的独创品牌，和“Nike”的主创球鞋还是有些差异，因此分开，“Jordan”和“Air Jordan”的差异仅在于“Air Jordan”是乔丹正代（经典鞋款），所以把“Air Jordan”的球鞋放入“Jordan”鞋款一并分析</font></p>
+<p>为了分析的结果更加具体，所以将球鞋依照品牌分类分析，因为需要划分价格区间，所以首先要获取3个品牌的价格最大值，通过排序获得最贵的球鞋<font color="deepskyblue"><strong>Nike Shox VC III</strong></font>，售价3899元，因而价格的全区间就为<strong>0-4000</strong>，再根据500进行细分：</p>
+<p><img src="/2019/12/25/%E2%80%9C%E8%AF%86%E8%B4%A7%E2%80%9D%E7%90%83%E9%9E%8B%E4%BB%B7%E6%A0%BC%E5%88%86%E6%9E%90/xf.png"></p>
+<p>每个品牌的价格集中区一目了然，“Nike”价格多集中在500-1000中，“李宁”价格多集中在0-500中，而“Jordan”在0-500和500-1000这两个价格区间的球鞋款式数量不相上下，且Nike是唯一具有2500元以上鞋款的品牌。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>基于“识货”网站热门球鞋排行版所获取前600的球鞋，通过详细的数据分析，以及绘图结果可知：</p>
+<ul>
+<li><p>通过对球鞋的品牌分析可知，进入球鞋领域的品牌数量远超想象，仅仅排行前600的球鞋就有21个品牌；</p>
+</li>
+<li><p>当下球鞋行业的领头品牌是“Nike”、“李宁”和 “Jordan”三个品牌；</p>
+</li>
+<li><p>和预想的结果不同，在普通人的眼中，“Nike”和“adidas”均是鞋企的首屈一指，但“adidas”并未进入前三的行列，位次“Jordan”，排行第四；</p>
+</li>
+<li><p>基于“识货”这一宣称全网最低价的球鞋网站，获得的最低球鞋价格和市面上流通的大多数球鞋的价格相比相差甚远，可知当前市场球鞋价格虚高的现象非常严重，球鞋爱好者因此现象深受伤害；</p>
+</li>
+<li><p>将“李宁”、“Nike”和“Jordan”三个品牌的球鞋分开逐一分析，并基于价格区间进行分类汇总，得知“李宁”品牌的价格多为0-500元，Jordan也没有想象中的昂贵，价格也都集中在0-500元，而Nike的大多数球鞋价格均在500-1000元，且是三个品牌唯一一个有超过2500元球鞋的品牌；</p>
+</li>
+<li><p>基于以上的价格分析，不难看出，“李宁”的价格更为亲民，比较适合喜爱球鞋的学生党，而“Nike”基于它“老大哥”的地位，报价相对而言较高，对于实战的需要频繁换鞋的学生而言并不适合；</p>
+</li>
+<li><p>对它们价格集中的区间进行详细分析，获取区间的品牌价格天梯，“Nike”就算是低于1000元也有很多999.99元的球鞋，不难猜测球鞋爱好者买账的原因绝大多数还是“Nike”的品牌效应</p>
+</li>
+</ul>
+<p>作为一名球鞋爱好者，面对当下鞋贩子盛行、球鞋价格满天飞的状况着实头大，而“识货”提供了全网每双球鞋的最低价格的购买路径，所以可以基于此网站的数据，对热门球鞋的价格进行详细分析，便于未来购买自己喜爱的鞋款，而且，如果未来能够从其他网站平台获取更多的相关数据，可以通过深度学习对每双自己想要购置的球鞋进行价格预测，躲开鞋贩子挖下的雷区❤。</p>
+]]></content>
+      <categories>
+        <category>Project Design</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Scrapy</tag>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云计算技术</title>
+    <url>/2020/11/17/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF/</url>
+    <content><![CDATA[<p><img src="/2020/11/17/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF/sakura.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>近几年，随着云计算的不断发展,其<strong>可伸缩性</strong>、<strong>高可用性</strong>、<strong>易管理性</strong>以及<strong>低成本</strong>等优点逐渐得到广泛的认可。云计算平台作为云计算的核心技术，社会各界人士都对这一领域表现出极大的兴趣。<strong>SaaS</strong>(software as a service，软件即服务)、<strong>PaaS</strong> (platform as a service，平台即服务)、 <strong>IaaS</strong>(infrastructure as a service，基础设施即服务)，这三者为云计算的三大服务形式。</p>
+<span id="more"></span>
+
+<h3 id="云计算服务模式概述"><a href="#云计算服务模式概述" class="headerlink" title="云计算服务模式概述"></a>云计算服务模式概述</h3><h4 id="✔IaaS"><a href="#✔IaaS" class="headerlink" title="✔IaaS"></a>✔IaaS</h4><p>IaaS为用户提供处理，存储，网络和其他<strong>基本计算资源</strong>，用户可以在其中部署和运行任意软件，其中包括操作系统和应用程序。使用者不需要管理或控制底层的云基础架构，但可以控制操作系统，存储和部署应用程序。</p>
+<p>此外，IaaS可以根据需求<strong>快速扩展和缩小</strong>，并提供高层次的API用来间接访问物理计算资源，让用户能够专注于核心业务，而不是基础架构。对用户而言，IaaS免去了建立和管理现场数据中心的前期费用，一旦决定启动新产品、计划，便可在几分钟或几小时内准备好必要的计算基础架构，并在适当的服务水平协议（SLA）的帮助下，实现极高的可用性、业务连续性和安全性。</p>
+<hr>
+<h4 id="✔PaaS"><a href="#✔PaaS" class="headerlink" title="✔PaaS"></a>✔PaaS</h4><p>PaaS提供了一个<strong>使客户可以在其开发，运行和管理应用程序，而无需构建和维护该应用程序的平台</strong>。在三层云计算中，SaaS是托管在云中的软件，它不会占用用户计算机上的硬盘空间。IaaS虽然可以提供具有可调整性与可伸缩性虚拟硬件，但它扮演的也只是基础设施的角色，而PaaS源自于SaaS，操作位于SaaS和IaaS之间的云计算中，其技术层的使用在整个云计算系统中起着至关重要的作用。作为系统软件角色的它，可以为上层提供丰富的api，开发各种SaaS应用，同时，PaaS的目标不仅是像传统的系统软件那样提供一些基本的api，它还能提供更高级的面向服务的api。对于第三方开发人员来说，他们不具备积累大量互联网资源的能力，但是通过调用PaaS平台的api，他们就可以提供满足用户需求的应用程序。</p>
+<p>由此可见，PaaS的实质是<strong>将Internet服务转化为可编程接口，为第三方开发者提供具有商业价值的资源和服务平台</strong>。在PaaS的支持下，各个领域的知名互联网公司纷纷整合自身长期积累的资源，使得越来越多的资源可以在平台上使用，云计算开发者从而获得了大量具有特定业务逻辑的可编程元素。PaaS极大地开发了互联网资源的价值，为云计算的发展带来了便利。在PaaS的支持下，Web应用的开发变得更加灵活。基于这些原因，PaaS成为云计算中最关键的技术。</p>
+<hr>
+<h4 id="✔SaaS"><a href="#✔SaaS" class="headerlink" title="✔SaaS"></a>✔SaaS</h4><p>SaaS是基于互联网提供软件服务的软件应用模式，提供给客户的服务是<strong>运营商运行在云计算基础设施上的应用程序</strong>，用户可以在各种像浏览器一样的设备上通过客户端界面访问，且<strong>不需要管理或控制任何云计算基础设施</strong>，只需向运营商支付费用，就可以随时随地使用软件资源。</p>
+<p>作为一种在21世纪开始兴起的创新的软件应用模式，SaaS是软件科技发展的最新趋势。SaaS服务模式与传统服务模式有很大的不同，相比较而言SaaS具有很多独特的特征：SaaS不仅减少或取消了传统的软件授权费用，而且厂商将应用软件部署在统一的服务器上，免除了最终用户的服务器硬件、网络安全设备和软件升级维护的支出，客户除了个人电脑和互联网连接，不需要任何其他的消费，就可以通过互联网获得所需要软件和服务。对于使用SaaS平台的企业而言，它们可以借助SaaS获得最新的技术应用，并且无需配备更多IT方面的专业技术人员。SaaS在满足企业对信息管理的需求的同时，很大程度<strong>缓解了企业在人力、财力上的压力</strong>，使其能够集中资金对核心业务进行有效的运营。</p>
+<h3 id="云计算关键技术"><a href="#云计算关键技术" class="headerlink" title="云计算关键技术"></a>云计算关键技术</h3><h4 id="💫IaaS的关键技术"><a href="#💫IaaS的关键技术" class="headerlink" title="💫IaaS的关键技术"></a>💫IaaS的关键技术</h4><h5 id="💫服务器虚拟化"><a href="#💫服务器虚拟化" class="headerlink" title="💫服务器虚拟化"></a>💫服务器虚拟化</h5><p>服务器虚拟化技术是指<strong>能够在一台物理服务器上运行多台虚拟服务器</strong>的技术，而且上述虚拟服务器在用户、应用软件甚至操作系统看来，几乎与物理服务器没有区别。除此之外，服务器虚拟化技术还应该确保上述多台虚拟服务器的数据是隔离的，虚拟服务器对资源的占用是可控的。</p>
+<hr>
+<h5 id="💫存储虚拟化"><a href="#💫存储虚拟化" class="headerlink" title="💫存储虚拟化"></a>💫存储虚拟化</h5><p>存储虚拟化是指通过抽象，隐藏或者隔离等技术实现存储系统与应用、主机或者网络资源的分离，其目的是<strong>进行与应用和网络无关的存储或数据管理</strong>。虚拟化为对底层存储资源的复杂功能的访问提供了简单、一致的接口，使用户不必关心底层系统的复杂实现。</p>
+<hr>
+<h5 id="💫云计算管理平台"><a href="#💫云计算管理平台" class="headerlink" title="💫云计算管理平台"></a>💫云计算管理平台</h5><p>上述的虚拟化技术主要是实现了对底层物理资源的抽象，使其成为一个个可以被灵活生成、调度、管理的基础资源单位。而要将这些资源进行有效的整合，形成一个可统一管理、灵活分配调度、动态迁移的基础服务设施资源池，并按需向用户提供自动化的基础设施服务，还需要构建一个IaaS管理平台。</p>
+<p>一般而言，IaaS管理平台分为资源管理平台和业务管理平台。资源管理平台负责对物理设备和虚拟化资进行统一的管理和调度，形成统一的资源池，实现IaaS服务的可管、可控，其核心业务是<strong>实现对每个资源单位的生命周期管理能力和对资源管理调度能力</strong>。而业务管理平台的职责是将资源封装成各种服务，以方便易用的方式对外提供给用户。其中业务服务管理主要将底层资源进行组合和打包，形成供用户购买的业务和服务。</p>
+<hr>
+<h4 id="🔴PaaS的关键技术"><a href="#🔴PaaS的关键技术" class="headerlink" title="🔴PaaS的关键技术"></a>🔴PaaS的关键技术</h4><h5 id="🔴动态地与可扩展的基础设施共享"><a href="#🔴动态地与可扩展的基础设施共享" class="headerlink" title="🔴动态地与可扩展的基础设施共享"></a>🔴动态地与可扩展的基础设施共享</h5><p>动态容量功能的自动调整是PaaS的一个基本功能，实现这一功能的关键技术是<strong>网格技术和数据库网格技术</strong>。应用网格是资源共享和动态扩展的基础，而实现网格应用的核心机制是Web服务器集群。使用Web Logic Server可以在线添加或删除节点、自动重新平衡集群负载、自动调整节点故障，当然也可以用来进行外部管理。在内存方面，通过Web Logic Server使PaaS平台具有分布式、共享、动态可伸缩的特性。另外，数据库网格和存储网格为PaaS的数据库和存储提供了灵活的可扩展性。</p>
+<hr>
+<h5 id="🔴支持快速自动部署"><a href="#🔴支持快速自动部署" class="headerlink" title="🔴支持快速自动部署"></a>🔴支持快速自动部署</h5><p>在传统的软件部署中，至少需要经历四个步骤：</p>
+<ul>
+<li><p>购买和配置硬件</p>
+</li>
+<li><p>安装和配置操作系统</p>
+</li>
+<li><p>安装和配置中间件和数据库</p>
+</li>
+<li><p>安装和配置应用程序</p>
+</li>
+</ul>
+<p>然而，在PaaS平台中，我们可以通过可视为“软件设备”的虚拟模块快速部署环境。它<strong>将操作系统、中间件和应用程序打包为虚拟模块</strong>。</p>
+<hr>
+<h5 id="🔴支持组件共享"><a href="#🔴支持组件共享" class="headerlink" title="🔴支持组件共享"></a>🔴支持组件共享</h5><p><strong>共享组件</strong>是PaaS的核心特性。通过使用共享组件，开发人员可以使用嵌入式组件开发应用程序，或者使用连接服务和配置实例的方法。</p>
+<hr>
+<h5 id="🔴支持自助服务"><a href="#🔴支持自助服务" class="headerlink" title="🔴支持自助服务"></a>🔴支持自助服务</h5><p>自助服务主要体现在为PaaS用户<strong>提供监控和管理界面</strong>。应用程序所有者可以设置自己的策略根据用户要求进行适当调整反馈。</p>
+<hr>
+<h4 id="✨SaaS的关键技术"><a href="#✨SaaS的关键技术" class="headerlink" title="✨SaaS的关键技术"></a>✨SaaS的关键技术</h4><h5 id="✨成熟度划分"><a href="#✨成熟度划分" class="headerlink" title="✨成熟度划分"></a>✨成熟度划分</h5><p>SaaS成熟度有4个划分等级，分别为第1级定制开发的SaaS应用（多次开发模式）、第2级可配置的多租户SaaS应用（一次开发多次部署模式）、第3级单实例支持多租户的SaaS应用架构（一次开发一次部署模式）、第4级支持可伸缩性的多租户SaaS应用架构。</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>成熟度等级</strong></th>
+<th align="center"><strong>第1级</strong>  <strong>定制开发</strong></th>
+<th align="center"><strong>第2级</strong>  <strong>可配置</strong></th>
+<th align="center"><strong>第3级</strong>  <strong>单实例架构</strong></th>
+<th align="center"><strong>第4级</strong>  <strong>可伸缩</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">主要特点</td>
+<td align="center">托管运营  按需使用付费</td>
+<td align="center">多租户模式  可配置性</td>
+<td align="center">高性价比  统一维护</td>
+<td align="center">支持可伸缩性  动态资源分配</td>
+</tr>
+<tr>
+<td align="center">关键技术</td>
+<td align="center">实现托管运营</td>
+<td align="center">可配置性  租户管理</td>
+<td align="center">单实例架构  安全隔离</td>
+<td align="center">负载均衡  资源管理</td>
+</tr>
+</tbody></table>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>云计算的实质是依靠互联网提供的高效的，安全的、经济的资源共享，信息和应用服务模式。其目的是通过高效的资源管理，给用户提供所需的资源，并按其供求关系，达到双方共赢的局面。IaaS、PaaS、SaaS三者共同构成一个较为复杂的生态结构系统：</p>
+<p>IaaS为用户提供了云端的基础设施，大幅节约了开发成本，提高了工作效率；PaaS平台上的开发，未来可能会彻底改变用户对计算资源的使用方式，使得用户从以桌面为核心转向以 Web 为核心；SaaS让使用“浏览器”开发成为可能。这些毫无疑问是互联网未来的发展方向软件开发，我们没有理由不相信云计算会成功为信息技术带来一场惊心动魄的变革。</p>
+]]></content>
+      <categories>
+        <category>Knowledge</category>
+      </categories>
+      <tags>
+        <tag>云计算</tag>
+        <tag>IAAS</tag>
+        <tag>PaaS</tag>
+        <tag>SaaS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>今日中国动漫在日本</title>
+    <url>/2019/08/13/%E4%BB%8A%E6%97%A5%E4%B8%AD%E5%9B%BD%E5%8A%A8%E6%BC%AB%E5%9C%A8%E6%97%A5%E6%9C%AC/</url>
+    <content><![CDATA[<p><img src="/2019/08/13/%E4%BB%8A%E6%97%A5%E4%B8%AD%E5%9B%BD%E5%8A%A8%E6%BC%AB%E5%9C%A8%E6%97%A5%E6%9C%AC/biaoren.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>2018年，中国动漫作品《镖人》轰动整个日本。日本NHK报道三次称其为“太阳系级别的中国漫画精品”；《犬夜叉》作者高桥留美子评价其“魅力非凡的角色，风驰电掣的剧情，趣味无可挑剔！”；小学馆前主编御木基宏鼎力推荐，在豆瓣上也斩获9.3的极高评分。</p>
+<p>兴趣使然，最近正在看这部漫画。这部漫画一改国漫往日的那种低龄化，无聊化，以狂放不羁的线条和动人心魄的情节描绘着隋末时期的风云故事，与金庸笔下的武侠如出一辙，只不过是用一种更为直观的方式呈现出政局的动荡不安和江湖的腥风血雨。《镖人》诚然是一部极具时代风格的作品，在中国动漫史上有着不可替代的重要意义。</p>
+<span id="more"></span>
+
+<h3 id="今日中国动漫在日本"><a href="#今日中国动漫在日本" class="headerlink" title="今日中国动漫在日本"></a>今日中国动漫在日本</h3><p>动漫，意为动画+漫画，指动画与漫画的集合。近年来，动漫产业发展迅速，看动漫已经成为了一种必不可少的娱乐方式走进人们的生活。作为Z世代的我们，最早接触的动漫多是日漫，日漫凭借其多元的画风和极具特色的动漫产业链，一直处在世界动漫的前沿。但伴随着时代的进步，中国动漫行业凭借现在的科学技术，实现了突飞猛进的发展，在以动漫占据主导地位的日本也有了一席之地。</p>
+<p>国漫的起步其实并不晚，早在20世纪20年代，就有了中国的第一部动漫作品《大闹画室》， 60-80年代更是中国动漫的鼎盛时期，《大闹天宫》、《哪吒闹海》等作品获得国内国际多个奖项，那时的国漫无疑是成功的。但随着90年代日漫和其他国家漫画的引进，更多的人开始去关注日漫。一个原本可以说已经极富盛名的中国动漫，为何敌不过日漫的受欢迎程度？为何直到如今才有像《镖人》一样的作品在日本引发轰动？恰巧就出生在90年代的我们，回想那时观看的动漫，国内即是《葫芦娃》、《黑猫警长》等在现在看来画风趋于幼稚的动漫，而同期从日本引进的则是《名侦探柯南》、《神奇宝贝》等以至如今还可以引发热议的动漫。</p>
+<p>确实，《葫芦娃》、《黑猫警长》这类作品也很优秀，至少当时年少无知的我们可以为它们在电视机前津津有味地看上一整天。但相比较那时的日漫呢？差距很明显。《镖人》这类画风的国漫之所以今天能在日本引起轰动，窃以为有以下几种原因：</p>
+<ul>
+<li><p>第一即是国内对于漫画态度的转变，漫画思想进步的同时，提升了漫画的整体品质。早期的动漫在国内被普遍认为，是拍给小孩子看的，只是作为一种启蒙教育，让孩子能够丰富自己的童年生活，传递的思想很单纯。面对低龄的受众人群，广电总局对国漫制作进行严格管控，很多含有血腥暴力画面的日漫被强烈抵制，国漫也因而为低幼动漫源源不断地输出新鲜血液。也正是因此，后来很长一段时间国漫都是“熊”和“羊”的天下。这类动漫确实能起到一定的启蒙作用，但反观日漫，它传递的是什么？是一种文化，一种精神，一些优秀的品质，以及一些做人的道理。就拿《数码宝贝》、《海贼王》这些动漫来讲，没有同心协力的团队精神，被选召的孩子如何拯救数码宝贝世界和现实世界？没有坚定勇敢的意志和永不言败的品质，路飞凭什么能当上海贼王？这些动漫让人们充满激情，这也是为什么如今依旧可以成为谈资的原因。如今的中国对于漫画的态度有了质的飞跃，动漫作为一种娱乐方式的同时，更是传播历史与文化的媒介。《镖人》就是一个典例，汲取日漫精华，用其成熟的画风诉说风云，让读者设身处地地去体验那个年代的刀光剑影，与此同时，扣人心弦的情节散发出由内而外的江湖豪情，瞬时使人血脉喷张，读者不同层面的感官体验进一步加强，《镖人》实至名归，让日本人民对国漫刮目相看。</p>
+</li>
+<li><p>第二是与时俱进地将中国的传统文化融入动漫。六七十年代的国漫为何成功，在于它们将中国所特有的表演艺术形式加入到动漫之中，让人们看到了传统艺术的进步与发扬。作为一个有着五千年历史的文明古国，有太多的文化历史可以去继承，去发展。90年代的日漫《中华小当家》发扬的就是中国传承已久的美食文化，用光鲜亮丽的色彩去描摹食物的精致，籍由此让人们去关注中国，关注美食。但那个年代的中国却选择了保守，继续使用像皮影、水墨这些在以往十分火热的表演艺术形式。这里并不是说皮影、水墨的艺术形式不好，我指的是，应该顺应时代潮流，以一种更加新潮的方式将这些元素融入动漫，而不是墨守成规地把动漫套用这种方式表达出来。《镖人》很好地结合了我国古代隋唐的历史，将武侠、民间传说和水墨等艺术形式以一种更加新颖的方式表现出来，在充分继承发扬历史的同时，不失表现近现代热门动漫的热血与活力。这是《镖人》成功十分重要的因素之一。</p>
+</li>
+</ul>
+<p>由此可见，国漫学习了日漫的先进与成功之处，开始在“漫画圣地”日本崛起。其实除了《镖人》，国内近些年也有不少优秀的动漫作品，像刚刚完结的《秦时明月》，今年热映的《白蛇：缘起》，以及即将迎来第二部的《大鱼海棠》。中国动漫日趋成熟，未来，我们需要有更多像《镖人》一样的作品，将中国的历史与文化用动漫的形象向国内外人士展现出来，让更多的人去认识中国，了解中国文化。相信在不久的将来国漫的发展会越来越好。</p>
+]]></content>
+      <categories>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>动漫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于Struts2和Hibernate的简易博客</title>
+    <url>/2020/01/06/%E5%9F%BA%E4%BA%8Estruts2%E5%92%8Chibernate%E7%9A%84%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p><img src="/2020/01/06/%E5%9F%BA%E4%BA%8Estruts2%E5%92%8Chibernate%E7%9A%84%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/firework.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>SpringMVC和SpringBoot两个框架用的真爽，这几天突发奇想想用它的老前辈Struts2和Hibernate搞个项目，要说上手最方便部署的项目应该就是博客了，所以就去网上查了查相关的文档和部署方法，做了个超减配的博客哈哈哈哈~</p>
+<span id="more"></span>
+
+<h3 id="分析与设计"><a href="#分析与设计" class="headerlink" title="分析与设计"></a>分析与设计</h3><h4 id="1-登录"><a href="#1-登录" class="headerlink" title="1. 登录"></a>1. 登录</h4><ul>
+<li><p>界面设计：将整个登录窗口居中，并添加image文件夹对登录界面添加背景图片。</p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">table&#123;</span><br><span class="line">        width: 400px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        border-radius: 20px;</span><br><span class="line">        background:gainsboro;</span><br><span class="line">        font-size:25px;</span><br><span class="line">        color:darkblue;</span><br><span class="line">        text-decoration:none;  	</span><br><span class="line">        position: absolute;</span><br><span class="line">        left: <span class="number">50</span>%;</span><br><span class="line">        top: <span class="number">50</span>%;</span><br><span class="line">        transform: translate(-<span class="number">50</span>%,-<span class="number">50</span>%);</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">        background-image: url(image/bg2.jpg);    </span><br><span class="line">        background-size:cover; </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>运行设计：用户名和密码判断使用action进行操作，登录时连接数据库的用户表，遍历整个数据库的username和password，使用MySQL的基础语句进行判断操作，对用户名及密码进行正误判定，操作成功将其用户名存入session中，方便后面jsp和action对其操作。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ResultSet resultSet = stmt.executeQuery(<span class="string">&quot;select * from user&quot;</span>);</span><br><span class="line"><span class="keyword">while</span>(resultSet.next())									 </span><br><span class="line">    <span class="keyword">if</span>(username!=<span class="keyword">null</span>&amp;&amp;resultSet.getString(<span class="number">1</span>).equals(username)&amp;&amp;pwd!=<span class="keyword">null</span>&amp;&amp;resultSet.getString(<span class="number">2</span>).equals(pwd))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ActionContext ctx = ActionContext.getContext();</span><br><span class="line">ctx.getSession().put(<span class="string">&quot;user&quot;</span>,user);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h4 id="2-全部博客内容"><a href="#2-全部博客内容" class="headerlink" title="2. 全部博客内容"></a>2. 全部博客内容</h4><h5 id="界面设计"><a href="#界面设计" class="headerlink" title="界面设计"></a>界面设计</h5><ul>
+<li><p>对表格<table>中的<tr>进行了样式设计，使用if语句将每行颜色<strong>间行相同</strong>。</tr></table></p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;tr bgcolor=&lt;%<span class="keyword">if</span>(i%<span class="number">2</span>==<span class="number">1</span>)&#123;%&gt;3399FF&lt;%i++;&#125;<span class="keyword">else</span>&#123;%&gt;white&lt;%i++;&#125;%&gt;&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="运行设计"><a href="#运行设计" class="headerlink" title="运行设计"></a>运行设计</h5><ul>
+<li><p>为了显示数据库中的全部博客内容，连接数据库中的用户博客表，包含id，用户名、发布的博客以及发布时间，并对此创建新的类。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserText</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">	<span class="keyword">private</span> String username;</span><br><span class="line">	<span class="keyword">private</span> String content;</span><br><span class="line">	<span class="keyword">private</span> String time;</span><br></pre></td></tr></table></figure></li>
+<li><p>内容的显示通过ArrayList数组的遍历。考虑到博客首条呈现的一般都是最新发布的博客，所以为达此目的，jsp中先将整个数据库表中的id循环获得里面的最大值（即最新的博客id），然后将id从大到小循环，通过hibernate对id的select方法，将博客内容全部显示。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> count=size;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k=count;k&gt;=<span class="number">1</span>;k--)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> UserText <span class="title">findUserById</span><span class="params">(<span class="keyword">int</span> id)</span></span>&#123;</span><br><span class="line">    Session session = HibernateUtil.getSisson();</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        UserText user = (UserText)session.get(UserText.class,id);</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(session!=<span class="keyword">null</span>)</span><br><span class="line">            session.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>除此之外，还要限定用户只能对自己的博客内容进行删除修改操作。登录过程中，用户名已存入session，所以只需读取，再用if语句对博客的username进行判断即可。</p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%activeUser=(String)session.getAttribute(<span class="string">&quot;user&quot;</span>); </span><br><span class="line">session.setAttribute(<span class="string">&quot;activeUser&quot;</span>,activeUser);%&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;%<span class="keyword">if</span>(activeUser.equals(username))&#123;%&gt;</span><br><span class="line">&lt;td&gt;&lt;center&gt;&lt;a href=&quot;update.jsp?id=$&#123;tempId&#125;&quot;&gt;&lt;font size=2 color=white&gt;Update&lt;/font&gt;&lt;/a&gt;&lt;/center&gt;&lt;/td&gt;</span><br><span class="line">&lt;td&gt;&lt;center&gt;&lt;a href=&quot;delete?id=$&#123;tempId&#125;&quot;&gt;&lt;font size=2 color=white&gt;&lt;onclick=&quot;myFunction()&quot;&gt;Delete&lt;/onclick&gt;&lt;/font&gt;&lt;/a&gt;&lt;/center&gt;&lt;/td&gt;</span><br><span class="line">&lt;%&#125;<span class="keyword">else</span>&#123; %&gt;</span><br><span class="line">&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;%&#125;&#125; %&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h4 id="3-发布操作"><a href="#3-发布操作" class="headerlink" title="3. 发布操作"></a>3. 发布操作</h4><ul>
+<li><p>通过按钮触发“发布”的超链接，进入发布界面，样式沿用了之前的添加背景的方法，更换了图片。标题会显示登录的用户名，且用不同的颜色标注一样是通过session的方法实现。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;td&gt;&lt;center&gt;&lt;a href=&quot;publish.jsp&quot;&gt;&lt;font size=&quot;5&quot; color=white&gt;Post Blog&lt;/font&gt;&lt;/a&gt;&lt;/center&gt;&lt;/td&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>输入框设为textarea，并使用表单提交，然后触发提交的action，通过username和getContent()方法，以hibernate的格式添加至数据库，跳转至登录进入的初始界面。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;textarea name=&quot;content&quot; cols=&quot;80&quot; rows=&quot;15&quot; align=&quot;center&quot;&gt;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">UserText userText = <span class="keyword">new</span> UserText();</span><br><span class="line">UserTextDao dao = <span class="keyword">new</span> UserTextDao();</span><br><span class="line">userText.setUsername((String)ctx.getSession().get(<span class="string">&quot;activeUser&quot;</span>));</span><br><span class="line">userText.setContent(getContent());</span><br><span class="line">dao.save(userText);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h4 id="4-修改操作"><a href="#4-修改操作" class="headerlink" title="4. 修改操作"></a>4. 修改操作</h4><ul>
+<li><p>根据登录者的不同，对自己的个人博客进行修改。点击update，触发跳转，跳转的同时传递每条博客的id（遍历的同时把id以EL语言的形式固定在每个触发按钮操作上），由id使用hibernate的selectId的方法将具体博客的内容以EL语言的格式呈现在修改框。修改入库的操作就与发布的操作相一致，样式方面同样与发布相似。</p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;update.jsp?id=$&#123;tempId&#125;&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;%</span><br><span class="line"><span class="keyword">int</span> id = Integer.parseInt(request.getParameter(<span class="string">&quot;id&quot;</span>));</span><br><span class="line">session.setAttribute(<span class="string">&quot;id&quot;</span>,id);</span><br><span class="line">UserText userText = <span class="keyword">new</span> UserText();</span><br><span class="line">UserTextDao dao = <span class="keyword">new</span> UserTextDao();</span><br><span class="line">userText = dao.findUserById(id);</span><br><span class="line">String content=userText.getContent();</span><br><span class="line">session.setAttribute(<span class="string">&quot;content&quot;</span>,content);</span><br><span class="line">%&gt;</span><br><span class="line">&lt;textarea name=&quot;content&quot; cols=&quot;80&quot; rows=&quot;15&quot; align=&quot;center&quot;&gt;$&#123;content&#125;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h4 id="5-删除操作"><a href="#5-删除操作" class="headerlink" title="5. 删除操作"></a>5. 删除操作</h4><ul>
+<li><p>根据登录者的不同，对自己的个人博客进行删除。点击delete触发action，跳转的同时传递每条博客的id（遍历的同时把id以EL语言的形式固定在每个触发按钮操作上）</p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;delete?id=$&#123;tempId&#125;&quot;</span>&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>由id使用hibernate的selectId的方法将具体博客的内容从数据库中删除。删除伴随弹窗。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> id=getId();</span><br><span class="line">UserText userText = <span class="keyword">new</span> UserText();</span><br><span class="line">UserTextDao dao = <span class="keyword">new</span> UserTextDao();</span><br><span class="line">userText=dao.findUserById(id);</span><br><span class="line">dao.delete(userText);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function">function <span class="title">myFunction</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123; alert(<span class="string">&quot;删除成功！&quot;</span>);&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h4 id="6-退出"><a href="#6-退出" class="headerlink" title="6. 退出"></a>6. 退出</h4><ul>
+<li><p>退出即跳转，点击触发退出的action，将session的内容进行清空，并跳回至登录界面。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ActionContext ctx = ActionContext.getContext();</span><br><span class="line">ctx.getSession().clear();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="成品"><a href="#成品" class="headerlink" title="成品"></a>成品</h3><p><font color="deepskyblue">登陆界面</font></p>
+<p><img src="/2020/01/06/%E5%9F%BA%E4%BA%8Estruts2%E5%92%8Chibernate%E7%9A%84%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2.JPG"></p>
+<p><font color="deepskyblue">全部用户博客</font></p>
+<p><img src="/2020/01/06/%E5%9F%BA%E4%BA%8Estruts2%E5%92%8Chibernate%E7%9A%84%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/%E5%85%A8%E9%83%A8%E7%94%A8%E6%88%B7%E5%8D%9A%E5%AE%A2.JPG"></p>
+<p><font color="deepskyblue">写博客</font></p>
+<p><img src="/2020/01/06/%E5%9F%BA%E4%BA%8Estruts2%E5%92%8Chibernate%E7%9A%84%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/%E5%86%99%E5%8D%9A%E5%AE%A2.JPG"></p>
+]]></content>
+      <categories>
+        <category>Project Design</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Web</tag>
+        <tag>Struts2</tag>
+        <tag>Hibernate</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日漫中的校园文化：学园祭</title>
+    <url>/2020/05/07/%E6%97%A5%E6%BC%AB%E4%B8%AD%E7%9A%84%E6%A0%A1%E5%9B%AD%E6%96%87%E5%8C%96%EF%BC%9A%E5%AD%A6%E5%9B%AD%E7%A5%AD/</url>
+    <content><![CDATA[<p><img src="/2020/05/07/%E6%97%A5%E6%BC%AB%E4%B8%AD%E7%9A%84%E6%A0%A1%E5%9B%AD%E6%96%87%E5%8C%96%EF%BC%9A%E5%AD%A6%E5%9B%AD%E7%A5%AD/japan.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>随着动漫产业急速发展，这一领域的佼佼者日本动漫为愈来愈多的人关注和接受。日漫日益成为人们了解日本文化、生活、理念的重要渠道之一。而动漫中的校园不得不提的即是学园祭，几乎所有含校园情节的动漫都包含学园祭的元素。</p>
+<span id="more"></span>
+
+<h3 id="学园祭"><a href="#学园祭" class="headerlink" title="学园祭"></a>学园祭</h3><p>作为一名“柯南死忠粉”，最早知道学园祭源自于《名侦探柯南》中“危命的复活”系列。这部动漫中围绕校园的情节并不很多，但之所以令我印象深刻，是由于在此次学园祭中，为缓解小兰对柯南的疑虑，柯南为数不多地变回了新一。除此之外，在此次学园祭中新一也多了一个经典形象：黑衣骑士。后来看的很多动漫都有学园祭这样的情节，像是《龙与虎》中大桥高校文化祭，其中的摔跤演出和选美大赛的桥段都十分出彩，亦或是《旋风管家》中白皇学院的文化祭，三千院凪在一夜之间将学院布置成东京国际会展中心。</p>
+<p>学园祭中的“祭”不同于中文含义的祭祀、祭礼，在日语中指的是热闹的活动。学园祭相当于日本的校园文化节，一般选择在秋季举办具有各自学校特色的学园祭。看起来很近似于中国的校庆或是开放日活动，但实则截然不同，中国的校级活动多半都是由老师领导一手操办，学生充当配角，无法切身体会校园活动的快乐。而日本的学园祭完全是由学生自主进行举办的，从最初的准备，到后期的宣传，以及正式的演出与活动，一切都是凭借学生的努力，将天马行空的想象付诸实施，老师只是以辅助的角色参与其中。学园祭的内容精彩纷呈，校内会摆摊售卖各种东西，点心、玩偶、饰品应有尽有，主题方面，学校不会干涉，完全取决于学生的脑洞。《境界的轮回》中，樱班级的主题就是女仆咖啡厅；《男子高中生的日常》中男生打造的鬼屋把女生吓得不轻。内容形式实在是“只有想不到，没有做不到“。</p>
+<p>学园祭的开展对于学生和学校，都有着很大的增益作用。学生自主举办学园祭，能够将青春时期那些停留在脑海中的或中二、或虚幻的各种想法现实化，培养创造力与动手能力的同时，能够把学生团结起来，齐心协力地去完成自己真正想做的事。不仅可以收获活动之外的友情，也可以与拥有相同爱好的人产生共鸣。对于学校，学园祭不仅是一个盛大节日，也是对外宣传的一个窗口，是日本校园一道独特而美丽的风景线。虽说学园祭的主体是学生，但活动的参与者不止局限于校内，社会各界人士都可以参与其中，一睹学校的风采。学园祭提升了学生的个人能力，又能更好地宣传学校，诚然是两全其美、一石二鸟之举。</p>
+<p>学园祭是每部校园动漫浓墨重彩的一笔，但除此之外，动漫中还有很多其他校园文化元素。学校里丰富多彩的社团，超脱凡俗的有像《凉宫春日的忧郁》中的“SOS团”，日语译为“让世界变得更热闹的凉宫春日团”，以春日为首的成员寻找外星人、未来人、异世界人以及超能力者的奇葩社团；又或是像《学园孤岛》中的学园生活部，为能在丧尸围校中幸存而不得以组建的社团等等。这些社团在现实生活中肯定是实现不了的，但同样也有很多正经的社团，《名侦探柯南》中毛利兰就是空手道社一流的好手，类似的还有茶道社、剑道社、弓道社之类，无疑都可以影射到现实学校中的社团。除去社团之外，还有最令学生激动人心的修学旅行。一说到修学旅行，我第一个想到的就是新一小兰这对CP，他们正是在修学旅行中确定了情侣关系。旅行的地点多种多样，可以去金阁寺等历史名胜古迹寻找历史，也可以去山清水秀的野外一赏大自然的美好风光，真的着实有些羡慕日本的学生呢。</p>
+<p>学园祭、社团、修学旅行，动漫中的这些校园元素，可以看出日本学校的一个很重要的原则——以学生为中心。无论是学园祭的举办，或是社团的创办管理，到修学旅行的初衷和意义，都是学生为主，老师为辅。日本的人性化教育更为注重学生们的素质培养，而不仅仅是知识的传授。学校放羊式的管理给予学生们更多的时间去参与他们有兴趣的事业，锻炼学生们的能力，也因此获得更多的校园体验与更多的社会经验，为未来的工作生活做好充足的准备。反观中国的校园文化，学校方面过多的干涉，对于学业方面的过度看重，导致学生无法培养进入社会所必须拥有的经验和技能，这是我们应该学习日本学校的地方。</p>
+<p>通过动漫，可以看到日本学校异彩纷呈的校园文化，人性化的教育和自主化的生活使学生们获得许多课堂上、书本中不能涉及到的知识，成为他们人生的美好回忆及享用不尽的精神财富。其实动漫中还有很多别样的校园文化，本文只是汲取了最具特色的部分进行分析。总而言之，动漫是我们了解认识日本的重要媒介，陪伴我们成长的同时，带给我们更为丰富的外面的世界❤。</p>
+]]></content>
+      <categories>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>动漫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用OpenGL做个史蒂夫？</title>
+    <url>/2019/06/15/%E7%94%A8OpenGL%E5%81%9A%E4%B8%AA%E5%8F%B2%E8%92%82%E5%A4%AB%EF%BC%9F/</url>
+    <content><![CDATA[<p><img src="/2019/06/15/%E7%94%A8OpenGL%E5%81%9A%E4%B8%AA%E5%8F%B2%E8%92%82%E5%A4%AB%EF%BC%9F/scene.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>这两天倒腾计算机图形学，简直打开了新世界的大门，功能都能媲美建模软件了，这么好玩的东西怎么能不安排一下呢，史蒂夫搞起！(所谓史蒂夫，肯定就是”我的世界”中的人物啦~)</p>
+<p>史蒂夫就在这里啦~欢迎大家一起玩👉<a href="https://download.csdn.net/download/Qyy2079628327/15793387">OpenGL计算机图形学构建我的世界人物（含贴图）</a></p>
+<span id="more"></span>
+
+<h3 id="关键技术"><a href="#关键技术" class="headerlink" title="关键技术"></a>关键技术</h3><h4 id="✔简介"><a href="#✔简介" class="headerlink" title="✔简介"></a>✔简介</h4><p>任务目标很简单，即用OpenGL制作人物。”我的世界”人物的特点在于头、身体、四肢均为6个不同的<strong>棱柱</strong>，只需使用不同的函数进行构造即可。人物的图片纹理同样均是基于“我的世界”人物，通过Photoshop软件进行绘画，以纹理贴图的形式加载至项目中，场景也亦是如此。</p>
+<p>相对而言，动作方面就会比较单一：人物的位置，头部、臂部、腿部只可使用键盘简单地<strong>绕轴运动</strong>。</p>
+<p>场景方面营造的是一种沙漠环境，因此相应地采取了金字塔这种辅景。金字塔的绘制通过函数建立不同大小的四棱锥，用纹理贴图进行描摹，再使用不同的坐标位置进行放置。此外，项目还包括光照、雾化、半透明的操作，采用不同位置的光源，黄色的多层雾化效果，使得整个画面更加趋于真实。</p>
+<p>PS：由于自学的缘故，很多高深的东西还等待琢磨啦～(￣▽￣～)~</p>
+<hr>
+<h4 id="✔人物建模（以头部为例）"><a href="#✔人物建模（以头部为例）" class="headerlink" title="✔人物建模（以头部为例）"></a>✔人物建模（以头部为例）</h4><p>人物建模其实就和搭积木一样简单，说白了就是6个柱体的<strong>位置摆放</strong>和<strong>轴</strong>的确定，完成后直接在上面贴上贴图就好😎</p>
+<p>原理都是一样的啦~这里就展示一个头部的完整建模好了</p>
+<h5 id="✨头部的位置确定"><a href="#✨头部的位置确定" class="headerlink" title="✨头部的位置确定"></a>✨头部的位置确定</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//头</span></span><br><span class="line">glPushMatrix();</span><br><span class="line">glTranslatef(<span class="number">-1.0f</span> + xmove2, ymove2 + <span class="number">1.5f</span>, zmove2);</span><br><span class="line">DrawSquare(width);</span><br><span class="line">glPopMatrix();</span><br></pre></td></tr></table></figure>
+
+<p>确定头部以后，需要根据头的位置，更改<font color="green"><strong>glTranslatef</strong></font>中的参数，确定躯干和四肢的位置。更改参数的根据同样是看预览效果。</p>
+<p>在定义人物的其他部分位置时，依旧采用<font color="green"><strong>xmove2</strong></font>、<font color="green"><strong>ymove2</strong></font>与<font color="green"><strong>zmove2</strong></font>，确保人物的每个组成部分始终在一起不会分开。eg.身体👇</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//身体</span></span><br><span class="line">glPushMatrix();</span><br><span class="line">glTranslatef(<span class="number">-1.0f</span> + xmove2, ymove2, zmove2);</span><br><span class="line">DrawCubeST(width);</span><br><span class="line">glPopMatrix();</span><br></pre></td></tr></table></figure>
+
+<p>PS：后续的人物移动需要的就是<font color="green"><strong>xmove2/ymove2/zmove2</strong></font>~</p>
+<hr>
+<h5 id="✨头部皮-tie-肤-tu-添加"><a href="#✨头部皮-tie-肤-tu-添加" class="headerlink" title="✨头部皮(tiē)肤(tú)添加"></a>✨头部皮(tiē)肤(tú)添加</h5><p>一个立方体具有<strong>6个面</strong>，因此皮肤贴图需要添加6次，且需要<strong>逐个绑定</strong>相对应的面</p>
+<p>加载贴图纹理👇</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (TextureImage[<span class="number">0</span>] = LoadBMP(<span class="string">&quot;Data/zm.bmp&quot;</span>))</span><br><span class="line">	&#123;</span><br><span class="line">		Status = TRUE;</span><br><span class="line"></span><br><span class="line">		glGenTextures(<span class="number">3</span>, &amp;texture[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//创建NEAREST滤波纹理贴图</span></span><br><span class="line">		glBindTexture(GL_TEXTURE_2D, texture[<span class="number">0</span>]);</span><br><span class="line">		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);</span><br><span class="line">		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);</span><br><span class="line">		glTexImage2D(GL_TEXTURE_2D, <span class="number">0</span>, <span class="number">3</span>, TextureImage[<span class="number">0</span>]-&gt;sizeX, TextureImage[<span class="number">0</span>]-&gt;sizeY, <span class="number">0</span>, GL_RGB, GL_UNSIGNED_BYTE, TextureImage[<span class="number">0</span>]-&gt;data);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//创建线性纹理贴图</span></span><br><span class="line">		glBindTexture(GL_TEXTURE_2D, texture[<span class="number">1</span>]);</span><br><span class="line">		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</span><br><span class="line">		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);</span><br><span class="line">		glTexImage2D(GL_TEXTURE_2D, <span class="number">0</span>, <span class="number">3</span>, TextureImage[<span class="number">0</span>]-&gt;sizeX, TextureImage[<span class="number">0</span>]-&gt;sizeY, <span class="number">0</span>, GL_RGB, GL_UNSIGNED_BYTE, TextureImage[<span class="number">0</span>]-&gt;data);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//创建MipMapped滤波纹理贴图</span></span><br><span class="line">		glBindTexture(GL_TEXTURE_2D, texture[<span class="number">2</span>]);</span><br><span class="line">		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</span><br><span class="line">		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);</span><br><span class="line">		glTexImage2D(GL_TEXTURE_2D, <span class="number">0</span>, <span class="number">3</span>, TextureImage[<span class="number">0</span>]-&gt;sizeX, TextureImage[<span class="number">0</span>]-&gt;sizeY, <span class="number">0</span>, GL_RGB, GL_UNSIGNED_BYTE, TextureImage[<span class="number">0</span>]-&gt;data);</span><br><span class="line"></span><br><span class="line">		gluBuild2DMipmaps(GL_TEXTURE_2D, <span class="number">3</span>, TextureImage[<span class="number">0</span>]-&gt;sizeX, TextureImage[<span class="number">0</span>]-&gt;sizeY, GL_RGB, GL_UNSIGNED_BYTE, TextureImage[<span class="number">0</span>]-&gt;data);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>头部构建与贴图绑定👇</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//头rot</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DrawSquare</span><span class="params">(<span class="keyword">float</span> width)</span><span class="comment">//一个棱长为width的正方体</span></span></span><br><span class="line"><span class="function"><span class="comment">//定义定点、拓扑结构（哪几个点构成正方形）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	glRotatef(yrot, <span class="number">0.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span>);<span class="comment">//指明绕哪个轴旋转</span></span><br><span class="line"></span><br><span class="line">	glBindTexture(GL_TEXTURE_2D, texture[filter]);</span><br><span class="line">	glBegin(GL_QUADS);</span><br><span class="line">    </span><br><span class="line">	<span class="comment">//正面</span></span><br><span class="line">	glNormal3f(<span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">1.0f</span>);<span class="comment">//指定法向量</span></span><br><span class="line">	<span class="comment">//glTexCoord2f纹理映射</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//正面左下A(-1,-1,1)//1均为比例</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//正面右下B(1,-1,1)</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">1.0f</span>); glVertex3f(width / <span class="number">2</span>, width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//正面右上C(1,1,1)</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">1.0f</span>); glVertex3f(-width / <span class="number">2</span>, width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//正面左上D(-1,1,1)</span></span><br><span class="line">	glEnd();</span><br><span class="line"></span><br><span class="line">	glBindTexture(GL_TEXTURE_2D, texture[filter+<span class="number">9</span>]);<span class="comment">//绑定贴图文件</span></span><br><span class="line">	glBegin(GL_QUADS);</span><br><span class="line">	<span class="comment">//背面</span></span><br><span class="line">	glNormal3f(<span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">-1.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//背面左下E(-1,-1,-1)</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">1.0f</span>); glVertex3f(-width / <span class="number">2</span>, width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//背面左上F(-1,1,-1)</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">1.0f</span>); glVertex3f(width / <span class="number">2</span>, width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//背面右上G(1,1,-1)</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//背面右下H(1,-1,-1)</span></span><br><span class="line">	glEnd();</span><br><span class="line"></span><br><span class="line">	glBindTexture(GL_TEXTURE_2D, texture[filter + <span class="number">12</span>]);</span><br><span class="line">	glBegin(GL_QUADS);</span><br><span class="line">	<span class="comment">//顶面</span></span><br><span class="line">	glNormal3f(<span class="number">0.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">1.0f</span>); glVertex3f(-width / <span class="number">2</span>, width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//F</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//D</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//C</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">1.0f</span>); glVertex3f(width / <span class="number">2</span>, width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//G</span></span><br><span class="line">	glEnd();</span><br><span class="line"></span><br><span class="line">	glBindTexture(GL_TEXTURE_2D, texture[filter + <span class="number">15</span>]);</span><br><span class="line">	glBegin(GL_QUADS);</span><br><span class="line">	<span class="comment">//底面</span></span><br><span class="line">	glNormal3f(<span class="number">0.0f</span>, <span class="number">-1.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">1.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//E</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">1.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//H</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//B</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//A</span></span><br><span class="line">	glEnd();</span><br><span class="line"></span><br><span class="line">	glBindTexture(GL_TEXTURE_2D, texture[filter + <span class="number">3</span>]);</span><br><span class="line">	glBegin(GL_QUADS);</span><br><span class="line">	<span class="comment">//右侧面</span></span><br><span class="line">	glNormal3f(<span class="number">1.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//H</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">1.0f</span>); glVertex3f(width / <span class="number">2</span>, width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//G</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">1.0f</span>); glVertex3f(width / <span class="number">2</span>, width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//C</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//B</span></span><br><span class="line">	glEnd();</span><br><span class="line"></span><br><span class="line">	glBindTexture(GL_TEXTURE_2D, texture[filter + <span class="number">6</span>]);</span><br><span class="line">	glBegin(GL_QUADS);</span><br><span class="line">	<span class="comment">//左侧面</span></span><br><span class="line">	glNormal3f(<span class="number">-1.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//E</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//A</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">1.0f</span>); glVertex3f(-width / <span class="number">2</span>, width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//D</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">1.0f</span>); glVertex3f(-width / <span class="number">2</span>, width / <span class="number">2</span>, -width / <span class="number">2</span>);<span class="comment">//F</span></span><br><span class="line">	glEnd();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h5 id="✨头部的动作绑定"><a href="#✨头部的动作绑定" class="headerlink" title="✨头部的动作绑定"></a>✨头部的动作绑定</h5><h6 id="🔴躯干动作"><a href="#🔴躯干动作" class="headerlink" title="🔴躯干动作"></a>🔴躯干动作</h6><p>因为所建人物处于三维空间中，动作即为<strong>绕轴运动</strong>，而在建模过程中就已经确定了每个部分的可转动轴，比如头部转动轴为y轴，手臂转动轴为x轴等等，根据按键修改<font color="green"><strong>glRotatef</strong></font>中的<font color="green"><strong>xrot/yrot/zrot</strong></font>值，即可实现动作。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (keys[<span class="string">&#x27;D&#x27;</span>])<span class="comment">//头向右转</span></span><br><span class="line">&#123;</span><br><span class="line">	yrot += <span class="number">0.005f</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (keys[<span class="string">&#x27;A&#x27;</span>])<span class="comment">//头向左转</span></span><br><span class="line">&#123;</span><br><span class="line">	yrot -= <span class="number">0.005f</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="🔴人物移动"><a href="#🔴人物移动" class="headerlink" title="🔴人物移动"></a>🔴人物移动</h6><p>在定义头部的位置时，提及到了<font color="green"><strong>xmove2</strong></font>、<font color="green"><strong>ymove2</strong></font>与<font color="green"><strong>zmove2</strong></font>，在三维空间中，人物的移动改变即为这<strong>三个坐标值的改变</strong>，<strong>绑定按键</strong>完成实现。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (keys[<span class="string">&#x27;1&#x27;</span>])<span class="comment">//人向上挪动</span></span><br><span class="line">&#123;</span><br><span class="line">	ymove2 += <span class="number">0.0001f</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (keys[<span class="string">&#x27;4&#x27;</span>])<span class="comment">//人向右挪动</span></span><br><span class="line">&#123;</span><br><span class="line">	xmove2 += <span class="number">0.0001f</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (keys[<span class="string">&#x27;6&#x27;</span>])<span class="comment">//人向近处挪动</span></span><br><span class="line">&#123;</span><br><span class="line">	zmove2 -= <span class="number">0.0001f</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="✔场景搭建"><a href="#✔场景搭建" class="headerlink" title="✔场景搭建"></a>✔场景搭建</h4><h5 id="✨环境光"><a href="#✨环境光" class="headerlink" title="✨环境光"></a>✨环境光</h5><p>本项目采取了4个光源，具体的参数设置如下。调参很简单，运行时根据效果更改即可(´-ω-`)</p>
+<p>记得在<font color="green"><strong>InitGL</strong></font>中调用~</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">GLfloat	z = <span class="number">-6.0f</span>;	<span class="comment">//控制观察点离物体的远近</span></span><br><span class="line"></span><br><span class="line">GLfloat LightAmbient[] = &#123; <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span> &#125;;			<span class="comment">//环境光1参数</span></span><br><span class="line">GLfloat LightDiffuse[] = &#123; <span class="number">1.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span> &#125;;			<span class="comment">//漫反射光1参数</span></span><br><span class="line">GLfloat LightPosition[] = &#123; <span class="number">-5.0f</span>, <span class="number">-3.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span> &#125;;			<span class="comment">//光源1位置（三维坐标轴x,y,z为前3个）</span></span><br><span class="line"></span><br><span class="line">GLfloat LightAmbient2[] = &#123; <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span> &#125;;			<span class="comment">//环境光2参数</span></span><br><span class="line">GLfloat LightDiffuse2[] = &#123; <span class="number">0.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span> &#125;;			<span class="comment">//漫反射光2参数</span></span><br><span class="line">GLfloat LightPosition2[] = &#123; <span class="number">5.0f</span>, <span class="number">-4.0f</span>, <span class="number">1.5f</span>, <span class="number">0.0f</span> &#125;;			<span class="comment">//光源2位置</span></span><br><span class="line"></span><br><span class="line">GLfloat LightAmbient3[] = &#123; <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span> &#125;;			<span class="comment">//环境光3参数</span></span><br><span class="line">GLfloat LightDiffuse3[] = &#123; <span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span> &#125;;			<span class="comment">//漫反射光3参数</span></span><br><span class="line">GLfloat LightPosition3[] = &#123; <span class="number">0.5f</span>, <span class="number">4.0f</span>, <span class="number">0.5f</span>, <span class="number">0.0f</span> &#125;;			<span class="comment">//光源3位置</span></span><br><span class="line"></span><br><span class="line">GLfloat LightAmbient4[] = &#123; <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span> &#125;;			<span class="comment">//环境光4参数</span></span><br><span class="line">GLfloat LightDiffuse4[] = &#123; <span class="number">0.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span> &#125;;			<span class="comment">//漫反射光4参数</span></span><br><span class="line">GLfloat LightPosition4[] = &#123; <span class="number">-0.7f</span>, <span class="number">-5.0f</span>, <span class="number">1.5f</span>, <span class="number">0.0f</span> &#125;;		<span class="comment">//光源4位置</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h5 id="✨天气效果"><a href="#✨天气效果" class="headerlink" title="✨天气效果"></a>✨天气效果</h5><p>沙漠里的浓雾效果可以使用<strong>OpenGL库</strong>中的<strong>雾化效果</strong>实现，选择模式、颜色、雾气种类，搞定✔</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">GLuint filter;			<span class="comment">//滤波类型</span></span><br><span class="line">GLuint texture[<span class="number">9</span>];		<span class="comment">//9种纹理的存储空间 3种不同的纹理3张图片</span></span><br><span class="line">GLuint fogMode[] = &#123; GL_EXP, GL_EXP2, GL_LINEAR &#125;; <span class="comment">// 雾气的模式</span></span><br><span class="line">GLuint fogfilter = <span class="number">0</span>;	<span class="comment">// 使用哪一种雾气</span></span><br><span class="line">GLfloat fogColor[<span class="number">4</span>] = &#123; <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">0.5f</span>, <span class="number">1.0f</span> &#125;;</span><br><span class="line"><span class="comment">// 雾的颜色设为黄色</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h5 id="✨辅景-金字塔"><a href="#✨辅景-金字塔" class="headerlink" title="✨辅景-金字塔"></a>✨辅景-金字塔</h5><p>与人物建模原理相同，不过这次需要构建的是三棱柱，且<strong>只有5面</strong>，导入贴图纹理，在构建完成三棱柱后，绑定面即可。</p>
+<p>需要注意的是三棱柱有一个面是<strong>正方形</strong>~</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//金字塔</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DrawPyramid</span><span class="params">(<span class="keyword">float</span> width)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	glBindTexture(GL_TEXTURE_2D, texture[filter + <span class="number">45</span>]);</span><br><span class="line">	glBegin(GL_TRIANGLES);</span><br><span class="line">	<span class="comment">//正面</span></span><br><span class="line">	glNormal3f(<span class="number">0.0f</span>, <span class="number">0.5f</span>, <span class="number">1.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.5f</span>, <span class="number">1.0f</span>); glVertex3f(<span class="number">0</span>, width / <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	glNormal3f(<span class="number">-1.0f</span>, <span class="number">0.5f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.5f</span>, <span class="number">1.0f</span>); glVertex3f(<span class="number">0</span>, width / <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	glNormal3f(<span class="number">0.0f</span>, <span class="number">0.5f</span>, <span class="number">-1.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.5f</span>, <span class="number">1.0f</span>); glVertex3f(<span class="number">0</span>, width / <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	glNormal3f(<span class="number">1.0f</span>, <span class="number">0.5f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.5f</span>, <span class="number">1.0f</span>); glVertex3f(<span class="number">0</span>, width / <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line">	glEnd();</span><br><span class="line">	</span><br><span class="line">    <span class="comment">//底面正方形</span></span><br><span class="line">	glBegin(GL_QUADS);</span><br><span class="line">	glNormal3f(<span class="number">0.0f</span>, <span class="number">-1.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">1.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);</span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">1.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, -width / <span class="number">2</span>);</span><br><span class="line">	glEnd();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h5 id="✨背景"><a href="#✨背景" class="headerlink" title="✨背景"></a>✨背景</h5><p>背景就相对而言更简单了，一个<strong>平面</strong>+一幅<strong>背景位图纹理</strong>放在后面就好啦~</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//背景</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BackGround</span><span class="params">(<span class="keyword">float</span> width)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	glBindTexture(GL_TEXTURE_2D, texture[filter + <span class="number">48</span>]);</span><br><span class="line">	glBegin(GL_QUADS);</span><br><span class="line">	<span class="comment">//正面</span></span><br><span class="line">	glNormal3f(<span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">1.0f</span>);<span class="comment">//指定法向量</span></span><br><span class="line">	<span class="comment">//glTexCoord2f纹理映射</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">0.0f</span>); glVertex3f(-width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//正面左下A(-1,-1,1)//1均为比例</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">0.0f</span>); glVertex3f(width / <span class="number">2</span>, -width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//正面右下B(1,-1,1)</span></span><br><span class="line">	glTexCoord2f(<span class="number">1.0f</span>, <span class="number">1.0f</span>); glVertex3f(width / <span class="number">2</span>, width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//正面右上C(1,1,1)</span></span><br><span class="line">	glTexCoord2f(<span class="number">0.0f</span>, <span class="number">1.0f</span>); glVertex3f(-width / <span class="number">2</span>, width / <span class="number">2</span>, width / <span class="number">2</span>);<span class="comment">//正面左上D(-1,1,1)</span></span><br><span class="line">	glEnd();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="成品展示"><a href="#成品展示" class="headerlink" title="成品展示"></a>成品展示</h3><p><img src="/2019/06/15/%E7%94%A8OpenGL%E5%81%9A%E4%B8%AA%E5%8F%B2%E8%92%82%E5%A4%AB%EF%BC%9F/1.jpg"></p>
+<p><img src="/2019/06/15/%E7%94%A8OpenGL%E5%81%9A%E4%B8%AA%E5%8F%B2%E8%92%82%E5%A4%AB%EF%BC%9F/2.jpg"></p>
+]]></content>
+      <categories>
+        <category>Project Design</category>
+      </categories>
+      <tags>
+        <tag>OpenGL</tag>
+        <tag>计算机图形学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>车辆租赁系统的数据库设计</title>
+    <url>/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/cyber.jpg"></p>
+<h3 id="随语"><a href="#随语" class="headerlink" title="随语"></a>随语</h3><p>温习数据库知识时，无聊的学生管理系统、课程管理系统看的令人麻木🙃为啥不搞点不一样的嘞？自己做个其他模板它不香嘛，搞起！</p>
+<p>完整数据库文件👉<a href="https://download.csdn.net/download/Qyy2079628327/15784319">车辆租赁系统数据库-Vehicle Database.sql </a></p>
+<span id="more"></span>
+
+<h3 id="系统功能设想"><a href="#系统功能设想" class="headerlink" title="系统功能设想"></a>系统功能设想</h3><h4 id="✔对象说明"><a href="#✔对象说明" class="headerlink" title="✔对象说明"></a>✔对象说明</h4><p>车辆租赁系统主要包含以下<strong>三个</strong>管理系统：</p>
+<ul>
+<li><p><strong>客户信息管理</strong>：客户基本信息(客户编号、客户姓名、客户密码、客户电话、客户邮箱、客户身份证号、租用数量)增加、修改、查询与删除。</p>
+</li>
+<li><p><strong>车辆信息管理</strong>：车辆基本信息(车辆编号、车辆分类号、车辆名称、车辆品牌、车辆价格、车辆押金、单日租用价格、入库时间)增加、修改、查询与删除。</p>
+</li>
+<li><p><strong>租赁业务管理</strong>：车辆的租用和归还功能，对车辆租用信息(包括租用编号，客户编号，车辆编号，租用日期，应归还日期,归还日期)增加、修改、查询与删除。</p>
+</li>
+</ul>
+<h4 id="✔功能说明"><a href="#✔功能说明" class="headerlink" title="✔功能说明"></a>✔功能说明</h4><p>车辆租赁系统的使用者分为<strong>客户</strong>和<strong>管理员</strong></p>
+<h5 id="💫管理员模块"><a href="#💫管理员模块" class="headerlink" title="💫管理员模块"></a>💫管理员模块</h5><p>管理员可以进行<strong>客户管理</strong>，<strong>车辆管理</strong>，<strong>车辆租用业务管理</strong>，<strong>个人信息管理</strong>。</p>
+<ol>
+<li><p><strong>用户管理功能</strong>：可以直接查看用户的信息，能直接看到每一位用户的租用信息，并对违规客户(逾期归还车辆或破坏车辆多次)进行删除。</p>
+</li>
+<li><p><strong>车辆管理功能</strong>：可以增加、删除、更改数据库中车辆的信息。</p>
+</li>
+<li><p><strong>车辆租用业务管理功能</strong>：是将客户租用相关车辆的信息登记到客户信息上，客户想要租用车辆必须通过管理员使用该功能将该车辆信息登记到其账户上。</p>
+</li>
+<li><p><strong>个人信息管理</strong>：指管理员可以对自身的账户信息进行修改。</p>
+</li>
+</ol>
+<h5 id="💫客户模块"><a href="#💫客户模块" class="headerlink" title="💫客户模块"></a>💫客户模块</h5><p>客户可以<strong>查询个人信息</strong>和<strong>车辆信息</strong>。</p>
+<ol>
+<li><p><strong>查询个人信息</strong>：可以查看用户的个人信息、车辆租用信息以及更改用户账号密码。当用户登录成功后就能看到自身租用的车辆的时间、归还期限。并且可以管理自身的账户密码。</p>
+</li>
+<li><p><strong>查询车辆信息</strong>：可以通过搜索精确查找到具体需要的车辆，并且可以查看每一辆车的详细信息。当客户找到想要租用的车辆时，凭借车辆编号确定车辆，至管理员处将租用信息进行登记，并缴纳相对应的押金及租金，完成车辆租借业务。</p>
+</li>
+</ol>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/1.jpg" alt="车辆租赁系统功能结构图"></p>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/2.jpg" alt="业务流程分析"></p>
+<h3 id="概念设计"><a href="#概念设计" class="headerlink" title="概念设计"></a><strong>概念设计</strong></h3><h4 id="✔目标"><a href="#✔目标" class="headerlink" title="✔目标"></a>✔目标</h4><ul>
+<li><p><strong>管理员</strong>方便管理车辆和用户信息，以及租赁业务信息</p>
+</li>
+<li><p><strong>客户</strong>根据个人的具体需要，方便查询所需车辆。</p>
+</li>
+</ul>
+<h4 id="✔实体"><a href="#✔实体" class="headerlink" title="✔实体"></a>✔实体</h4><ul>
+<li><p><strong>管理员</strong>需要记录管理员编号、管理员姓名、管理员密码、管理员电话、管理员邮箱、管理员身份证号</p>
+</li>
+<li><p><strong>客户</strong>需要记录客户编号、客户姓名、客户密码、客户电话、客户邮箱、客户身份证号、租用数量</p>
+</li>
+<li><p><strong>车辆</strong>需要记录车辆编号、车辆分类号、车辆名称、车辆品牌、车辆价格、车辆押金、单日租用价格、入库时间</p>
+</li>
+<li><p><strong>租用业务</strong>需要记录租用编号、客户编号、车辆编号、租用日期、应归还日期、归还日期</p>
+</li>
+</ul>
+<h4 id="✔E-R图"><a href="#✔E-R图" class="headerlink" title="✔E-R图"></a>✔E-R图</h4><p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E7%AE%A1%E7%90%86%E5%91%98-%E8%BD%A6%E8%BE%86ER.JPG" alt="管理员-车辆ER"></p>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E7%AE%A1%E7%90%86%E5%91%98-%E5%AE%A2%E6%88%B7ER.JPG" alt="管理员-客户ER"></p>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E5%AE%A2%E6%88%B7-%E8%BD%A6%E8%BE%86ER.JPG" alt="客户-车辆ER"></p>
+<p><img src="/2019/10/05/%E8%BD%A6%E8%BE%86%E7%A7%9F%E8%B5%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/%E5%85%A8%E5%B1%80ER.JPG" alt="全局ER"></p>
+<h3 id="逻辑设计"><a href="#逻辑设计" class="headerlink" title="逻辑设计"></a><strong>逻辑设计</strong></h3><h4 id="✔E-R图到关系模式的转换"><a href="#✔E-R图到关系模式的转换" class="headerlink" title="✔E-R图到关系模式的转换"></a><strong>✔E-R</strong>图到关系模式的转换</h4><ul>
+<li><p>一名管理员可以管理多辆车，一辆车可以被多名管理员管理</p>
+</li>
+<li><p>一名管理员可以管理多名客户，一名客户可以被多名管理员管理</p>
+</li>
+<li><p>一名客户可以租用多辆车，一辆车可以被多名客户租用</p>
+</li>
+</ul>
+<p><font color="skyblue">各表均不存在部分依赖和传递依赖，满足1NF，2NF，3NF的条件</font></p>
+<h3 id="数据库索引与视图"><a href="#数据库索引与视图" class="headerlink" title="数据库索引与视图"></a><strong>数据库索引与视图</strong></h3><h4 id="✔索引"><a href="#✔索引" class="headerlink" title="✔索引"></a>✔索引</h4><ul>
+<li><strong>车辆非聚集索引</strong>：便于用户快速查询自己所需车辆。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*为车辆表的车辆名称及品牌建立索引i_carName*/</span></span><br><span class="line"><span class="keyword">create</span> nonclustered</span><br><span class="line">index i_carName</span><br><span class="line"><span class="keyword">on</span> Car(carName,brandName)</span><br><span class="line"><span class="keyword">drop</span> index Car.i_carName</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>用户非聚集索引</strong>：便于管理员在必要时及时联系相关客户。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*为用户表的用户编号、姓名和联系方式建立索引i_consumer*/</span></span><br><span class="line"><span class="keyword">create</span> nonclustered</span><br><span class="line">index i_consumer</span><br><span class="line"><span class="keyword">on</span> Consumer(userNo,userName,tel,email)</span><br><span class="line"><span class="keyword">drop</span> index Consumer.i_consumer</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>租赁信息非聚集索引</strong>：便于管理员更好地查询修改租赁表中的相关信息。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*为租赁表的车主及车辆建立索引i_hire*/</span></span><br><span class="line"><span class="keyword">create</span> nonclustered</span><br><span class="line">index i_hire</span><br><span class="line"><span class="keyword">on</span> Hire(userNo,carNo)</span><br><span class="line"><span class="keyword">drop</span> index Hire.i_hire</span><br></pre></td></tr></table></figure>
+
+<h4 id="✔视图"><a href="#✔视图" class="headerlink" title="✔视图"></a>✔视图</h4><ul>
+<li><strong>个人信息视图</strong>：此视图以“王兰”为例，用户可以随时查看自己的个人信息，并对相关信息进行修改。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> vPersonalInfo</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">select</span> userName,psd,tel,email,identifycard</span><br><span class="line"><span class="keyword">from</span> consumer</span><br><span class="line"><span class="keyword">where</span> userName <span class="operator">=</span> <span class="string">&#x27;王兰&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>车辆信息视图</strong>：便于客户根据自身需要查询车辆，知晓车辆的相关信息。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> vCarInfo</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">select</span> carNo,className,carName,brandName,rent,shopDate</span><br><span class="line"><span class="keyword">from</span> Car c,CarClass cc</span><br><span class="line"><span class="keyword">where</span> cc.classNo <span class="operator">=</span> c.classNo </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>租赁信息视图</strong>：此视图可以查看每一条租赁记录，便于管理员查看过往的租赁记录，并知晓哪些车辆已被租赁，并对逾期未归还车辆的客户及时联系，同时也便于用户查询自己的租赁信息。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> vHireInfo</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">select</span> h.rid,c.userNo,carName,brandName,hireDate,shouldDate,returndate,tel,email</span><br><span class="line"><span class="keyword">from</span> Hire h,Consumer c,Car</span><br><span class="line"><span class="keyword">where</span> c.userNo <span class="operator">=</span> h.userNo <span class="keyword">and</span> car.carNo <span class="operator">=</span> h.carNo</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据库触发器"><a href="#数据库触发器" class="headerlink" title="数据库触发器"></a>数据库触发器</h3><ul>
+<li>管理员在租赁业务表中插入租用信息时，通过不同用户的账号，对账户中的租用数量自动增加，若车辆已经归还（即returnDate不为空），则不会记录在客户的租赁数量中。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> tgUpdateCount </span><br><span class="line"><span class="keyword">on</span> hire</span><br><span class="line">after <span class="keyword">insert</span></span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	<span class="keyword">declare</span> <span class="variable">@returnDate</span> datetime</span><br><span class="line">	<span class="keyword">select</span> <span class="variable">@returnDate</span> <span class="operator">=</span> returnDate <span class="keyword">from</span> inserted</span><br><span class="line">	if(<span class="variable">@returnDate</span> <span class="keyword">is</span> <span class="keyword">null</span>)</span><br><span class="line">	<span class="keyword">begin</span></span><br><span class="line">		update consumer</span><br><span class="line">		<span class="keyword">set</span> hireCount <span class="operator">+</span><span class="operator">=</span> <span class="number">1</span></span><br><span class="line">		<span class="keyword">where</span> userNo <span class="operator">=</span> </span><br><span class="line">		(</span><br><span class="line">		<span class="keyword">select</span> i.userNo</span><br><span class="line">		<span class="keyword">from</span> inserted i</span><br><span class="line">		)</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>客户租用车辆的上限为6辆，若已经租用了6辆，系统将自动不再受理租赁业务。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> tgLimitation</span><br><span class="line"><span class="keyword">on</span> hire</span><br><span class="line">after <span class="keyword">insert</span></span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	<span class="keyword">declare</span> <span class="variable">@userno</span> <span class="type">varchar</span>(<span class="number">20</span>)</span><br><span class="line">	<span class="keyword">declare</span> <span class="variable">@num</span> tinyint</span><br><span class="line">	<span class="keyword">declare</span> <span class="variable">@msg</span> <span class="type">varchar</span>(<span class="number">200</span>)</span><br><span class="line">	<span class="keyword">select</span> <span class="variable">@userNo</span> <span class="operator">=</span> userNo <span class="keyword">from</span> inserted</span><br><span class="line">	<span class="keyword">select</span> <span class="variable">@num</span> <span class="operator">=</span> <span class="built_in">count</span>(<span class="operator">*</span>)</span><br><span class="line">	<span class="keyword">from</span> hire</span><br><span class="line">	<span class="keyword">where</span> userNo <span class="operator">=</span> <span class="variable">@userNo</span> <span class="keyword">and</span> returnDate <span class="keyword">is</span> <span class="keyword">null</span></span><br><span class="line">	if(<span class="variable">@num</span><span class="operator">&gt;</span><span class="number">6</span>)</span><br><span class="line">	<span class="keyword">begin</span> </span><br><span class="line">		<span class="keyword">rollback</span> transaction</span><br><span class="line">		<span class="keyword">set</span> <span class="variable">@msg</span> <span class="operator">=</span> <span class="string">&#x27;对不起，您已达租用上限（6辆）！&#x27;</span></span><br><span class="line">		raiserror(<span class="variable">@msg</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Project Design</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+        <tag>数据库设计</tag>
+      </tags>
   </entry>
 </search>
